@@ -1,0 +1,150 @@
+0.63
+・MD1.6.3に対応した。
+・2000年を中心にイベントによって分岐する歴史を追加しました。
+・対米外交NFをすこし改修しました。
+・政府首班の輪郭を追加しました。
+・尖閣諸島ステートは国有化をしていない限りは建築スロットが解除されないようになりました。
+・不要なバックアップ用ファイルを一つ削除しました。
+・NF"Anti-Sea Piracy Law"について、ジブチは日本に軍事通行権を得ることはありません。また、海軍経験値を得ることもありません。その代わりとして、イベントを通じて国民精神を得ることができます。
+・イベントを少し追加した
+・削除し忘れていた制作途上のイベントの一部を削除した。
+・一部のNFとイベントに文章を追加
+・一部の英文の見直し（あるいは悪化）
+
+0.62.1
+・MD1.6.1に対応した。
+・経済システムの変更に伴い、シナリオ開始時点での各ステートの建築物を大幅に変更した。
+・上の変更に伴い、工場を追加するNFは建物スロットのみを追加するようになる。
+・シナリオ開始時点における航空自衛隊の実戦部隊などの配置を再現した
+・憲法改正国民投票の確認イベントを21日前から15日前に変更した
+・arrayを少し書き換え、一部の政党とイデオロギーの対照を変更した
+・NF"Interdiscipline"と"Commercialism"の効果を変更した
+・試験的に利率変更の計算式を追加した
+・一部のideaによるtax costの影響を変更した
+・Emerging Outlookで自由民主党が第一党の時、首班指名選挙が正しく機能しなかったのを修正した。これにより、自民党選出の新首相はEmerging Outlookのイデオロギーを獲得する。
+・幾つかの首相候補が正しいイデオロギーを割り当てられていなかったのを修正した
+・2000年シナリオにおいて一部の技術を解除済みにした
+・2017年シナリオにおいてThird Gen Rosette Scanning IR UVが解除されていなかったのを修正した
+・2021年衆議院議員総選挙は10月14日に開始する
+・イベントを少し追加した
+・NHK党の設立とれいわ新選組の分裂に関する2つのイベントは廃止された。
+・「緊縮財政論」の性格を削除した。
+・鉄道貨物輸送をできるだけ再現するために線路を追加した
+・情報機関の名前を3つ追加した。これにより、自動的に割り当てられる名前の候補は4つとなる。
+・MDがまだ用意していない首相候補の名前と写真が異なってしまう場合に備えて、空白の肖像画を追加した。
+・建設時間と人口増加に悪影響を与える国民精神を追加した。
+・一部のNFとイベントに文章を追加
+・一部の英文の見直し（あるいは悪化）
+
+*Reuploaded for the fix of dependencies
+
+Due to the change of several systems in MD, the building built at the beginning of scenarios will be changed. This resulted that some NFs which once had added factories will no longer add the factory but the vacant slot.
+Recreates the location of JASDF units.
+The 2021 Lower House General Elections will be launched on 14th October.
+Moved the timing of the event about the confirmation for the constitution amendment referendum from 21 days before the voting date to 15 days before.
+Changed arrays to change the collation between parties and outlooks. As a result, for instance, Reiwa Shinsengumi will no longer be divided and Anti-NHK Party will no longer exist.
+Changed the effect of two NFs "Interdiscipline" and "Commercialism".
+Changed the calculation of interests.
+Changed the tax costs affected from several ideas.
+Fixed the Third Gen Rosette Scanning IR UV technology to be unlocked in the 2017 scenario.
+Fixed the Prime Minister Election that does not assign any candidates correctly when the LDP has won the general election while the Emerging Outlook is the new ideology picked, so that the new Prime Minister belongs to LDP will obtain the Emerging Outlook ideology.
+Fixed to unlock several technologies in the 2000 scenario.
+Fixed several possible candidates of Prime Minister who did not have the ideology correctly.
+Removed the Austerity Theory trait.
+Added several railways to represent the freight transportation as actual as possible.
+Added other three names of the intelligence agency, so now there are four candidates which will be named automatically for it.
+Added blank portraits to avoid mismatching the name and the picture of the Prime Minister that MD has not had yet.
+Added several negative ideas that mainly affect the construction times and population growth.
+Added several events.
+Reviewed (or worsen) some English texts.
+
+*NOTE* Now you need to subscribe the new Millennium Dawn to use this submod. Please check the playlist in the Paradox Launcher.
+
+0.62
+・China Encirclement NetworkシリーズのNFの終端を再編した。これにより、日本から中国または朝鮮半島国家に宣戦布告できるようにした
+・China Encirclement NetworkとIntervene in Korean Peninsulaを排他的にした。ただし、China Encirclement Networkはこれを選択しても朝鮮半島への侵攻が可能となる
+・China Encirclement NetworkとAsia Pacific Defensive Association (APDA)のメンバーは、中国との戦争に際して、当事国の要求に応じて、即座にあるいはDecisionを通じていつでも参戦できるようになった。
+・対中戦争の追加に伴い、Intervene in Korean PeninsulaシリーズのNFでは、第二次朝鮮戦争における休戦イベントを削除した。また、もはや日本と朝鮮半島との間で同盟を作ることはない。代わりに日本は韓国または北朝鮮に独立保障することになる。対中戦争の場合は、上記の同盟の一部となる。
+・対中戦争におけるAIによるボーダーゴアを防ぐため、すこし踏み込んだイベントを用意した: 台湾がChina Encirclement NetworkまたはAPDAに加盟している状態で中国と戦争した場合に、一定の条件を満たしていると、この陣営の盟主に対して講和イベントを発生するようにした。これは、中華民国の中国本土への帰還、東トルキスタンとチベットの独立、およびCapitulatedではない国以外と停戦することとなる。ただし、既にCapitulatedの国に対しては、本来通りの和平交渉を行える。
+・ゲームルールのModdingを理解した、なので、ゲームルールから上記の講和イベントをオフにできるようにした。
+・Defensive Strategies以下を中心にいくつかのNFを再編し、一部計画予定だったNFは別の分岐に移動あるいは削除またはイベントに変更した
+・Stimulate Fundamentalistsが解除するDecisionを本来予定していた内容へと変更
+・Great Heisei Recession以下の経済系IdeasのTax Costを全体的に-10%緩和
+・China Encirclement Networkのideaはもはや月毎の人口を増加しない
+・"Ordinary Japanese Men"等の日本の徴兵可能人口をブーストするideasを大幅に弱体化した
+・GDPの上昇を遅らせることを目的として、Improve Infrastructure in Okinawaは建物スロットを1つ追加する
+・Tibet and East Turkestanは、中国のNFの進行に左右されることなく、今やいつでも解除できる
+・勧誘したい相手国が戦争中の場合、China Encirclement NetworkもしくはAPDAに勧誘することはできない
+・日本または相手国の貿易法が閉鎖経済の場合、一意の二国間においてGain annual oil interestsのディシジョンは実行できなくなった
+・AIは一度尖閣諸島にレベル1の港を建設したら、もはやディシジョンを介して港を拡張し続けることはない
+・1日が切り替わるたびに約10回以上の金利の計算をすることは、もはや起きないはず
+・2017年シナリオでLTEとWiMaxの技術の択一的排他性を無視して両方取得していたのを修正した。今後、このシナリオで開始した場合、プレイヤーがLTEとWiMaxのどちらかを選択することとなる
+・2017年シナリオでSupport Minkuoが完了していなかったのを修正
+・"Man the Guns" DLCを有効化していない場合のために用意した船体が該当のDLCを有効化している状態でも表示されていたのを修正
+・USAのNFツリーなどに支障が出たため、Aggressive Strategiesの次に存在した同盟を模索するNational Fociの一群を削除した
+・Cruiser, Battlecruiser, BattleshipのHullの研究を取り除いた
+・中国またはロシアとの戦争中に外交ベースのNFを進行できないようにした
+・Millennium Dawn 1.5.1のCountry Colourを反映するよう修正した
+・（試験的に）日本における選挙イベントのシリーズをオリジナルのMillennium Dawnをベースに改造したもので上書きした
+・いくつかのイベントに自分の撮影した写真を含めて画像を追加
+・広島の地形画像を自分が撮った写真で上書きした（主にこのSubmodのアクティベートと非アクティベートを確認するために使っていた）
+・2021年2月までの史実のイベントを追加
+・2021年の衆議院総選挙を9月11日に実施されるよう変更
+・2000年を中心としたいくつかのイベントを追加
+・いくつかのディシジョンと関連したイベントを追加
+・一部のNFのアイコンを変更
+・一部のNFとイベントに文章を追加
+・一部の英文の見直し（あるいは悪化）
+
+0.62
+Series of National Foci "China Encirclement Network" is rearranged and now it is able to declare war against China or a Korean country.
+Both Series of National Foci "China Encirclement Network" and "Intervene in Korean Peninsula" are now mutually exclusive but you can choose the intervention into the Korean Peninsula via the "China Encirclement Network" National Focus.
+The member of the China Encirclement Network or Asia Pacific Defensive Alliance (APDA) can join the war with China. The member country involved with that war form the Hoi4-system-based alliance and can call allies in the event, and the other members can join the war immediately or via Decision later. The Hoi4-system-based alliance must be dissolved once the war ended.
+In exchange for putting the above war with China, the Japan-Korea alliance for the unification and the armistice event for the Korean War has been removed. Now Japan can give the guarantee to South Korea or North Korea.
+To prevent the border gore which may be caused by AI in the peace conference of the war with China, we prepared an event: When Taiwan has joined the China Encirclement Network or APDA, Taiwan is fighting with China, and some condition has been reached, the leader of the alliance will get another conference event which promises the returning of Taiwan into the continent, independence of East Turkestan and Tibet, and making the cease fire with other countries which has not capitulated. You can remove this event by the game rules setting.
+Series of National Foci "Defensive Strategies" are reorganised by aforementioned change, and several National Foci have been moved into other branches or removed.
+The detail of the Decision that could be unlocked by the NF "Stimulate Fundamentalists" is now completely changed.
+National Ideas related to the economy, such as Great Heisei Recession, are now lessened its Tax Costs by -10%.
+The idea "China Encirclement Network" will no longer give a boost to the monthly population.
+National Ideas which boosted the manpower reservation for conscription, such as "Ordinary Japanese Men", are now nerfed drastically.
+To delay the increase of GDP, the NF "Improve Infrastructure in Okinawa" will give one building slot.
+The NF "Tibet and East Turkestan" is now available irrespective of the progress of China's National Foci.
+The China Encirclement Network and the APDA cannot invite a country that has a war.
+The Decision "Gain Annual Oil Interests" will be restricted when Japan or the possible partner country has enacted the trade laws as closed.
+The AI Japan must no longer expand seaport in the Senkaku Islands once they constructed Level 1 seaport.
+It may no longer happen that the script calculates the interest ten very times day by day.
+In the 2017 scenario, Japan will no longer have both LTE and WiMax technologies at the beginning of the scenario, which must be mutually exclusive.
+In the 2017 scenario, Japan completed the NF "Support Minkuo".
+The default ship hulls, which must be for in case of the "Man the Guns" DLC is disabled, are now removed when you enabled the DLC.
+Six National Foci, which had been placed under the NF "Aggressive Strategies" to make an alliance, are now removed due to the issue in the United States' Focus Tree.
+Hull technologies of Cruiser, Battlecruiser, and Battleship are now removed.
+Some National Foci related to China and Russia will be unavailable when you are fighting with them.
+Changed some scripts for Japan's Lower House elections system. The Prime Minister must be picked by the event.
+Changed the election date of the really upcoming 2021 Japan's Lower House election to September 11th of 2021. (Based on my prediction.)
+Added Country colours defined by the default Millennium Dawn 1.5.1. (Sorry I forgot this one.)
+Added some pictures which include some photos I took.
+Added some historic events that happened before February 2021.
+Added some Decisions and events.
+Changed some NF icons.
+Added texts to some NF and events.
+Reviewed (or worsen) some English texts.
+
+0.61.1
+・WIPだったNFを一つ追加
+・尖閣諸島を国有化した後のmodifierを追加
+・国有化した尖閣諸島で石油を採掘する非常に長期的なdecisionを追加
+・NF「太平洋ベルトのコンビナート」はもはやスロットを追加しない
+・開始直後に尖閣諸島国有化のイベントが発生するのを止めるよう修正
+・いくつかのイベントに画像を追加
+
+0.61
+・MD1.5に対応
+・2020年11月までの史実イベントを追加
+・東トルキスタンタグの復活と尖閣諸島ステートの追加に伴う改修
+・AIが韓国と開戦しないよう修正（多分）
+・3.11国家精神をイベントと同時に付与し、イベントのボタンを押すのを先延ばしして3.11国家精神を2つ保持するのを修正
+・現実世界で予定されている次回衆議院選挙の個人的予測日程をさらに未来へ先延ばし
+・対中包囲網以下のNFを改修（未完成）
+・一部のNFのアイコンを変更
+・一部のイベントに文章を追加
+・一部の英文の見直し（あるいは悪化）

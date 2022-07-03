@@ -1,0 +1,22 @@
+This mod changes Japan's national focus in Millennium Dawn into more historical (but more glitchy) things.
+
+About three years ago, I played Millennium Dawn (today's Classic one) first time and was amazed, but except one thing - the Japan's national focus tree.
+It didn't move historically (in my memory it could make the constitutional amendment before 2009) and lacked many feature from Japan's actual happened political, social and natural events.
+Then I have started to recreate the Japan's national focus to be historical.
+In this three years there was plenty of events in real Japan.
+I had met so many updates on Hoi4, the epic merge of Millennium Dawn with Modern Day 4, as well as annoying social real-life incidents.
+Therefore the uploading this submod was delayed to 2019 for the rearrengement and reconfiguration.
+I assure this mod would be never completed forever because the real social situation is still changing - at least, so far as the release of Hearts of Iron V or some epic change in Millennium Dawn.
+There has so many lacked or flawed contents in gaming or reading such as the detailed text of caused event or AI's moves, zero event picture, ambigous and incomprehensible English, and some unexpected global moves despite checking on the historical path.
+
+
+NOTICE
+THIS SUBMOD DO NOT EVER ASSURE YOU HOW OR WHY DID THEY HAPPEN ANY OR EVERY PAST HISTORICAL MOVES OR EVENTS, AND WHAT WILL HAPPEN IN NEAR FUTURE.
+This submod is based on historical events, my past experience on the ideological arguement in the Japanese Internet from 2002 to 2019, some books or old textbooks, some article from unreliable Wikipedia, and my headcanon.
+Sometimes you may feel "I was offended" about some sensitive events - I'm so sorry for this.
+The people, groups, countries and others are based on my egoistic subjectivity but I swear there has no intension to damege their everything.
+This is just a submod and not the main content of Millennium Dawn.
+I don't want to treat this as a official thing - because I want to see how are overseas people watching Japan, and also check and play the official Japan's national focus tree.
+I'll continue updating and sometimes remodel this submod gradually following in-real-life happens in Japan and the world, therefore sometimes you may meet some CTDs or irregular moves.
+Sometimes you might see the framerate is dropping to 1 fps while opening Japan's national focus window.
+Some contents might be updated following in-real-time events, such as political shifts, natural disasters, social unrests (e.g. unforgettable penal code crimes, aggressive demonstrations by the political radicalist or manifestation of discriminating public subconsiousness) and etc.

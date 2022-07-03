@@ -1,0 +1,2265 @@
+﻿  ###  ###  ####   ###  #   #
+   #  #   # #   # #   # ##  #
+   #  ##### ####  ##### # # #
+#  #  #   # #     #   # #  ##
+ ##   #   # #     #   # #   #
+ 
+        #
+ ###  ##### ###
+        #       #
+      # # #   ##
+##### # # # ##
+
+ 
+2000.1.1 = {
+	set_country_flag = dynamic_flag
+	set_country_flag = dynamic_rebel_flag
+	set_cosmetic_tag = JAP
+	
+	create_import = { resource = oil factories = 3 exporter = SAU }
+	create_import = { resource = oil factories = 3 exporter = UAE }
+	create_import = { resource = oil factories = 1 exporter = PER }
+	create_import = { resource = oil factories = 1 exporter = QAT }
+	create_import = { resource = oil factories = 1 exporter = KUW }
+	
+#	create_import = { resource = aluminium factories = 1 exporter = CHI }
+	
+	create_import = { resource = rubber factories = 1 exporter = IND }
+	
+	create_import = { resource = tungsten factories = 3 exporter = CHI }
+	create_import = { resource = tungsten factories = 1 exporter = AST }
+	
+	create_import = { resource = chromium factories = 1 exporter = SOV }
+	
+	617 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_HOKKAIDO } }
+	616 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_TOHOKU } }
+	613 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_CHUBU } }
+	612 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_KANSAI } }
+	611 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_CHUGOKU } }
+	610 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_SHIKOKU } }
+	609 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_KYUSHU } }
+	615 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_KANTO } }
+	
+	939 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_STATE_SENKAKU_PRIVATE_PROPERTY } }
+	
+	add_ideas = {
+		idea_JAP_emperor_akihito
+		
+		#pop_050
+		#article_nine_jap
+		shinto
+		g7_member
+		idea_mdmosjap_JAP_depopulation_0
+		idea_mdmosjap_JAP_earthquake_resistance_standards_2
+		idea_mdmosjap_JAP_japanese_article_9
+		#JAP_deflation
+		idea_mdmosjap_JAP_bubble_burst
+		idea_mdmosjap_JAP_komeito
+		idea_mdmosjap_JAP_postwar_authorities
+		idea_mdmosjap_JAP_shingakuryokukan_education
+		idea_mdmosjap_JAP_jsdf
+		idea_mdmosjap_JAP_defence_agency
+		#idea_mdmosjap_JAP_three_principles_on_arms_export
+		idea_mdmosjap_JAP_three_non_nuclear_principles
+		
+		modest_corruption
+	#	gdp_8
+		recession
+		#depression		#Changed to 'recession' because more slower construction time calculated NEGATIVE NUMBER in foreign investment time.
+		defence_01
+		consumption_economy
+		edu_03
+		health_05
+		social_05
+		bureau_05
+		police_03
+		volunteer_army
+		volunteer_women
+		officer_military_school
+		Major_Non_NATO_Ally
+		western_country
+		#medium_far_right_movement
+		maritime_industry
+		industrial_conglomerates
+		small_medium_business_owners
+		#hybrid
+		#tax_cost_31
+	}
+	
+	#Depopulation Idea
+#	set_variable = { mdmosjap_var_depopulating_virtual_rates = -0.250 }
+#	set_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 0 }
+	
+	#Tokyo Centralisation Modifier
+	add_dynamic_modifier = {
+		modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_CONRAD_LEFTRAD
+	}
+	add_dynamic_modifier = {
+		modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_CONRAD_RIGHTRAD
+	}
+
+	capital = 615
+	#oob = "JAP_2000"
+	oob = "JAP_2000_MDMOSJAP"
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+			set_naval_oob = "JAP_2000_naval_mtg"
+		else = {
+			set_naval_oob = "JAP_2000_naval_legacy"
+		}
+	}
+	if = {
+		limit = {
+			has_dlc = "La Resistance"
+		}
+		create_intelligence_agency = yes
+	}
+	set_convoys = 400
+	starting_train_buffer = 67.38 	#566 Locomotives (417 ELs + 149 DLs), source: https://www.jrfreight.co.jp/about (2022/03/26)
+	set_fuel_ratio = 0.95
+	
+	set_research_slots = 4
+	
+	set_rule = { can_create_factions = no }
+	
+	add_ideas = {
+	#	gdp_8
+		#pop_050
+		#article_nine_jap
+		shinto
+		g7_member
+		defence_01
+		consumption_economy
+		edu_03
+		health_05
+		social_05
+		bureau_05
+		police_03
+		Major_Non_NATO_Ally
+		western_country
+		maritime_industry
+		industrial_conglomerates
+		small_medium_business_owners
+		#hybrid
+		#tax_cost_10
+		#JAP_deflation
+	}
+	
+	#Cyber
+	add_to_array = { cyber_targets = USA }
+	add_to_array = { cyber_targets = CHI }
+	add_to_array = { cyber_targets = KOR }
+	add_to_array = { cyber_targets = NKO }
+	add_to_array = { cyber_targets = PHI }
+	add_to_array = { cyber_targets = SOV }
+	add_to_array = { cyber_targets = SIN }
+	add_to_array = { cyber_targets = TAI }
+	add_to_array = { cyber_targets = VIE }
+	
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 350 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 250 }
+	add_to_array = { influence_array = ENG.id }
+	add_to_array = { influence_array_val = 16 }
+	add_to_array = { influence_array = FRA.id }
+	add_to_array = { influence_array_val = 7 }
+	add_to_array = { influence_array = GER.id }
+	add_to_array = { influence_array_val = 6 }
+	add_to_array = { influence_array = TAI.id }
+	add_to_array = { influence_array_val = 32 }
+	add_to_array = { influence_array = KOR.id }
+	add_to_array = { influence_array_val = 22 }
+	startup_influence = yes
+	
+#	set_country_flag = positive_maritime_industry
+#	set_country_flag = positive_industrial_conglomerates
+#	set_country_flag = indifferent_small_medium_business_owners
+#	set_country_flag = indifferent_labour_unions
+#	set_country_flag = indifferent_international_bankers
+#	set_country_flag = positive_fossil_fuel_industry
+#	set_country_flag = positive_landowners
+#	set_country_flag = indifferent_farmers
+
+	set_variable = { maritime_industry_opinion = 60 }
+	set_variable = { industrial_conglomerates_opinion = 60 }
+	set_variable = { small_medium_business_owners_opinion = 50 }
+	set_variable = { defense_industry_opinion = 50 }
+	set_variable = { the_military_opinion = 50 }
+	set_variable = { intelligence_community_opinion = 50 }
+	set_variable = { labour_unions_opinion = 50 }
+	set_variable = { international_bankers_opinion = 50 }
+	set_variable = { fossil_fuel_industry_opinion = 60 }
+	set_variable = { landowners_opinion = 60 }
+	set_variable = { farmers_opinion = 50 }
+	set_variable = { the_priesthood_opinion = 50 }
+
+	set_variable = { var = debt value = 3415 }
+		#Source: https://www.mof.go.jp/tax_policy/summary/condition/a02.htm#a04
+	set_variable = { var = treasury value = 866 }
+		#Source: https://www.nikkei.com/edit/interactive/budget2015/#!/mode=revenue
+	set_variable = { var = int_investments value = 249 }
+		#Source: https://www.jetro.go.jp/ext_images/world/japan/stats/fdi/data/18fdistock01_jp.xls
+		#Rate in 2000: https://ecodb.net/exec/trans_exchange.php?b=JPY&c1=USD&ym=Y&s=&e
+	set_variable = { var = corporate_tax_rate value = 25 }
+		#Source: https://www.mof.go.jp/tax_policy/summary/corporation/082.pdf
+	set_variable = { var = population_tax_rate value = 15 }
+		#Estimated By: https://www.dir.co.jp/report/research/law-research/tax/20180621_020168.pdf
+		
+	#set_variable = { var = tax_rate value = 25 }	#OBSOLETED
+		#Source: https://www.oecd.org/tax/revenue-statistics-japan.pdf
+	
+	#initial_money_setup = yes
+	
+	#Investment System
+	add_to_array = { JAP.investment_targets = CHI }
+	add_to_array = { JAP.investment_targets = KOR }
+	add_to_array = { JAP.investment_targets = TAI }
+	add_to_array = { JAP.investment_targets = SIN }
+	add_to_array = { JAP.investment_targets = SIA }
+	add_to_array = { JAP.investment_targets = IND }
+	add_to_array = { JAP.investment_targets = MAY }
+	add_to_array = { JAP.investment_targets = PHI }
+	add_to_array = { JAP.investment_targets = CAN }
+	add_to_array = { JAP.investment_targets = USA }
+	add_to_array = { JAP.investment_targets = MEX }
+	add_to_array = { JAP.investment_targets = BRA }
+	add_to_array = { JAP.investment_targets = ARG }
+	add_to_array = { JAP.investment_targets = CHL }
+	add_to_array = { JAP.investment_targets = COL }
+	add_to_array = { JAP.investment_targets = AST }
+	add_to_array = { JAP.investment_targets = NZL }
+	add_to_array = { JAP.investment_targets = GER }
+	add_to_array = { JAP.investment_targets = FRA }
+	add_to_array = { JAP.investment_targets = ENG }
+	add_to_array = { JAP.investment_targets = HOL }
+	add_to_array = { JAP.investment_targets = ITA }
+	add_to_array = { JAP.investment_targets = BEL }
+	add_to_array = { JAP.investment_targets = LUX }
+	add_to_array = { JAP.investment_targets = SWI }
+	add_to_array = { JAP.investment_targets = SWE }
+	add_to_array = { JAP.investment_targets = SPR }
+	add_to_array = { JAP.investment_targets = POR }
+	add_to_array = { JAP.investment_targets = SAF }
+	add_to_array = { JAP.investment_targets = NIG }
+	add_to_array = { JAP.investment_targets = ALG }
+	add_to_array = { JAP.investment_targets = MOZ }
+	add_to_array = { JAP.investment_targets = ZIM }
+	add_to_array = { JAP.investment_targets = MAD }
+	add_to_array = { JAP.investment_targets = ETH }
+	add_to_array = { JAP.investment_targets = SAU }
+	add_to_array = { JAP.investment_targets = RAJ }
+	add_to_array = { JAP.investment_targets = MLD }
+	
+	add_opinion_modifier = { target = EGY modifier = diplomatic_support }
+	reverse_add_opinion_modifier = { target = EGY modifier = diplomatic_support }
+	add_opinion_modifier = { target = CBD modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = CBD modifier = large_commercial_relations }	
+	add_opinion_modifier = { target = RAJ modifier = military_cooperation }
+	reverse_add_opinion_modifier = { target = RAJ modifier = military_cooperation }	
+	add_opinion_modifier = { target = IND modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = IND modifier = large_commercial_relations } 
+	add_opinion_modifier = { target = KOR modifier = minor_border_dispute }
+	reverse_add_opinion_modifier = { target = KOR modifier = minor_border_dispute }
+	
+	add_opinion_modifier = { target = NKO modifier = mdmosjap_opinion_abduction1 }
+	reverse_add_opinion_modifier = { target = NKO modifier = mdmosjap_opinion_recognise_south }
+		
+	set_technology = { 
+		legacy_doctrines = 1 
+		modern_blitzkrieg = 1 
+		forward_defense = 1 
+		encourage_nco_iniative = 1 
+		air_land_battle = 1
+		
+		#Howa Type 89
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		tandem_charge_warheads = 1
+		squad_automatic_weapon = 1
+		support_weapons2 = 1
+		special_forces = 1
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+		command_control_equipment2 = 1
+		
+		land_Drone_equipment = 1
+		land_Drone_equipment1 = 1
+		
+		#Type 01 LMAT
+		Anti_tank_0 = 1
+		AT_upgrade_1 = 1
+		Anti_tank_1 = 1
+		
+		Heavy_Anti_tank_0 = 1
+		Heavy_Anti_tank_1 = 1
+		
+		#Type 91 SAM
+		Anti_Air_0 = 1
+		Anti_Air_1 = 1
+		AA_upgrade_1 = 1
+		
+		combat_eng_equipment = 1
+		
+		#Type 90
+		Early_APC = 1
+		MBT_1 = 1
+		MBT_2 = 1
+		MBT_3 = 1
+		
+	#	ENGI_MBT_1 = 1
+	#	ENGI_MBT_2 = 1
+	#	ENGI_MBT_3 = 1
+		
+		#Type 87
+		Rec_tank_0 = 1
+		Rec_tank_1 = 1
+		
+		#Type 89 IFV
+		IFV_1 = 1
+		IFV_2 = 1
+		IFV_3 = 1
+		
+		#Type 96
+		APC_1 = 1
+		APC_2 = 1
+		APC_3 = 1
+		APC_4 = 1
+		
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+		util_vehicle_2 = 1
+		util_vehicle_3 = 1
+		
+		#Type 99
+		SP_arty_0 = 1
+		SP_arty_1 = 1
+		
+		artillery_0 = 1
+		Arty_upgrade_1 = 1
+		
+		#Type 75 MRL
+		SP_R_arty_0 = 1
+		SP_R_arty_1 = 1
+		
+		#Type 3 Chu-Sam
+		SP_Anti_Air_0 = 1
+		SP_Anti_Air_1 = 1
+		
+		early_bomber = 1
+
+		early_fighter = 1
+		
+		AS_Fighter1 = 1			#F-104
+		AS_Fighter2 = 1			#F-15J
+		AS_upgrade_1 = 1
+		AS_Fighter3 = 1			#F-15J Kai
+		
+		MR_Fighter1 = 1			#F-4EJ
+		MR_Fighter2 = 1			#F-4EJ Kai
+		MR_upgrade_1 = 1		#
+		MR_Fighter3 = 1			#F-2A(F-2)
+		
+		Strike_fighter1 = 1		#F-1
+		Strike_fighter2 = 1		#FS-X (Must be - Skipped)
+		Strike_upgrade_1 = 1	
+		Strike_fighter3 = 1		#F-2B(F-2) (Must be)
+		
+		L_Strike_fighter1 = 1
+		L_Strike_fighter2 = 1
+		
+		#Kawasaki OH-1
+		early_helicopter = 1
+		attack_helicopter1 = 1
+		attack_helicopter2 = 1
+		transport_helicopter1 = 1
+
+		night_vision_1 = 1
+		night_vision_2 = 1
+		night_vision_3 = 1
+
+		#Kawasaki P-1
+		naval_plane1 = 1
+		
+		transport_plane1 = 1
+		transport_plane2 = 1
+
+		landing_craft = 1
+		
+		body_armor_1980 = 1
+		camouflage = 1
+		camouflage2 = 1
+		
+		#Engineering Tech
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		microprocessors = 1
+		computing2 = 1
+		computing3 = 1
+		encryption1 = 1
+		decryption1 = 1
+		encryption2 = 1
+		decryption2 = 1
+		
+		radar = 1
+		internet1 = 1	#1G
+		internet2 = 1	#2G
+		gprs = 1
+		
+		construction1 = 1
+		construction2 = 1
+		excavation1 = 1
+		excavation2 = 1
+		
+		fuel_silos = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		fuel_refining = 1
+		fuel_refining2 = 1
+		#energy_efficiency = 1
+		#energy_efficiency2 = 1
+		
+		#Industrial Tech
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+		early_high_speed_rail = 1
+		
+		neural_networks_revival = 1
+		data_mining = 1
+		machine_learning = 1
+		sociable_machines = 1
+		
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		modern_electrospinning = 1
+		
+		stereolitography = 1
+		early_3D_printers = 1
+		t3D_wax_printer = 1
+		large_scale_3D_printing = 1
+		
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		
+		#Warhead & Nuclear
+		reactor2 = 1
+		reactor3 = 1
+	}
+	if = {	#Naval Tech Without MtG DLC
+		limit = {
+			not = { has_dlc = "Man the Guns" }
+		}
+		set_technology = {
+			#Corvettes
+			corvette_1 = 1
+			corvette_2 = 1
+			missile_corvette_1 = 1 #Yubari-class (late 1980s)
+			missile_corvette_2 = 1 #Abukuma-class destroyer escort (1990)
+
+			#Destroyers
+			destroyer_1 = 1
+			destroyer_2 = 1
+			missile_destroyer_1 = 1 #Hatakaze-class destroyer (1983)
+			missile_destroyer_2 = 1 #Kongo-class destroyer (1990s)
+			
+			#Frigates
+			frigate_1 = 1
+			frigate_2 = 1
+			missile_frigate_1 = 1
+			missile_frigate_2 = 1 #Murasame-class destroyer (1994)
+			
+			#Diesel Attack Submarine
+			submarine_1 = 1
+			diesel_attack_submarine_1 = 1
+			diesel_attack_submarine_2 = 1
+			diesel_attack_submarine_3 = 1
+			
+			#LPD
+			LPD_0 = 1
+			LPD_1 = 1
+		}
+	}
+	if = {	#Naval Tech With MtG DLC
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_technology = {
+			corvette_hull_1 = 1
+			corvette_hull_2 = 1
+			corvette_hull_3 = 1
+
+			frigate_hull_1 = 1
+			frigate_hull_2 = 1
+			frigate_hull_3 = 1
+
+			destroyer_hull_1 = 1
+			destroyer_hull_2 = 1
+			destroyer_hull_3 = 1
+
+		#	cruiser_hull_1 = 1
+
+		#	battle_cruiser_hull_1 = 1
+
+		#	battleship_hull_1 = 1
+
+			helicopter_operator_hull_1 = 1
+			helicopter_operator_hull_2 = 1
+
+			attack_submarine_hull_1 = 1
+			attack_submarine_hull_2 = 1
+			attack_submarine_hull_3 = 1
+
+			missile_submarine_hull_1 = 1
+			missile_submarine_hull_2 = 1
+			missile_submarine_hull_3 = 1
+
+			aircraft_carrier_engineering = 1
+			aircraft_heli_engineering_1 = 1
+			aircraft_heli_engineering_2 = 1
+
+			tech_submarine_engineering = 1
+			tech_submarine_engineering_1 = 1
+			tech_submarine_engineering_2 = 1
+
+			tech_naval_systems_engineering = 1
+			tech_power_systems = 1
+			tech_power_systems_1 = 1
+
+			tech_combat_support_systems = 1
+			tech_fire_control = 1
+			tech_fire_control_1 = 1
+			tech_combat_radar = 1
+			tech_combat_radar_1 = 1
+			tech_combat_radar_2 = 1
+			tech_combat_sonar = 1
+			tech_combat_sonar_1 = 1
+			tech_combat_sonar_2 = 1
+
+			tech_early_naval_weapon_systems = 1
+			tech_naval_weapon_systems = 1
+			tech_light_guns = 1
+			tech_light_guns_1 = 1
+			tech_heavy_guns = 1
+			tech_heavy_guns_1 = 1
+
+			tech_point_defense_system = 1
+			tech_point_defense_system_1 = 1
+			tech_point_defense_system_2 = 1
+			tech_point_defense_system_3 = 1
+
+			tech_missile_systems = 1
+			tech_turret_missiles_surface = 1
+			tech_turret_missiles_surface_1 = 1
+			tech_turret_missiles_aa = 1
+			tech_turret_missiles_aa_1 = 1
+			tech_vls_surface = 1
+			tech_vls_surface_1 = 1
+			tech_vls_aa = 1
+			tech_vls_aa_1 = 1
+
+			tech_torpedoes = 1
+			tech_torpedoes_1 = 1
+			tech_torpedoes_2 = 1
+
+			tech_asw_systems = 1
+			tech_asw_systems_1 = 1
+			tech_asw_systems_2 = 1
+			tech_mine_warfare = 1
+			tech_mine_warfare_1 = 1
+
+			tech_mtg_landing_craft = 1
+		}
+	}
+#	set_popularities = {	#Until 1.6.2
+#		democratic = 71.9
+#		communism = 17.1
+#		fascism = 0.0
+#		neutrality = 4.0
+#		nationalist = 7.0
+#	}
+	set_popularities = {
+		democratic = 84.6
+		communism = 8.6
+		fascism = 0.0
+		neutrality = 5.3
+		nationalist = 1.5
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1996.10.20"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	#set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	#set_variable = { party_pop_array^1 = 0.41 } #conservatism
+	#set_variable = { party_pop_array^2 = 0.271 } #liberalism
+	#set_variable = { party_pop_array^3 = 0.038 } #socialism
+	#set_variable = { party_pop_array^4 = 0.121 } #Communist-State
+	#set_variable = { party_pop_array^5 = 0.03 } #anarchist_communism
+	#set_variable = { party_pop_array^6 = 0.02 } #Conservative
+	#set_variable = { party_pop_array^7 = 0 } #Autocracy
+	#set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	#set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	#set_variable = { party_pop_array^10 = 0 } #Kingdom
+	#set_variable = { party_pop_array^11 = 0 } #Caliphate
+	#set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	#set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	#set_variable = { party_pop_array^14 = 0.02 } #Neutral_conservatism
+	#set_variable = { party_pop_array^15 = 0 } #oligarchism
+	#set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	#set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	#set_variable = { party_pop_array^18 = 0.02 } #neutral_Social
+	#set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	#set_variable = { party_pop_array^20 = 0.01 } #Nat_Populism
+	#set_variable = { party_pop_array^21 = 0.02 } #Nat_Fascism
+	#set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	#set_variable = { party_pop_array^23 = 0.04 } #Monarchist
+	
+	set_variable = { party_pop_array^0 = 0.050 } 	#Western_Autocracy ------------- 自由民主党（親米保守）
+	set_variable = { party_pop_array^1 = 0.416 }	#conservatism ------------------ 自由民主党（漸進/リベラル）
+	set_variable = { party_pop_array^2 = 0.357 }	#liberalism -------------------- 民主党
+	set_variable = { party_pop_array^3 = 0.023 }	#socialism --------------------- 社会民主党
+	
+	set_variable = { party_pop_array^4 = 0.008 }	#Communist-State --------------- 共産主義系新左翼
+	set_variable = { party_pop_array^5 = 0.008 }	#anarchist_communism ----------- 社青同系
+	set_variable = { party_pop_array^6 = 0.020 }	#Conservative ------------------ 自由党
+	set_variable = { party_pop_array^7 = 0.050 }	#Autocracy --------------------- 自由民主党（保守/反動）
+	set_variable = { party_pop_array^8 = 0.000 }	#Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0.000 }	#Vilayat_e_Faqih
+	
+	set_variable = { party_pop_array^10 = 0.000 }	#Kingdom
+	set_variable = { party_pop_array^11 = 0.000 }	#Caliphate
+	
+	set_variable = { party_pop_array^12 = 0.000 }	#Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0.000 }	#Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.000 }	#Neutral_conservatism ---------- （まだ存在せず）
+	set_variable = { party_pop_array^15 = 0.020 }	#oligarchism ------------------- 保守党（保守新党）
+	set_variable = { party_pop_array^16 = 0.000 }	#Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0.010 }	#Neutral_green ----------------- 新党さきがけ
+	set_variable = { party_pop_array^18 = 0.015 }	#neutral_Social ---------------- 日本共産党
+	set_variable = { party_pop_array^19 = 0.008 }	#Neutral_Communism ------------- 革共同系
+	
+	set_variable = { party_pop_array^20 = 0.005 }	#Nat_Populism ------------------ 行動する保守
+	set_variable = { party_pop_array^21 = 0.000 }	#Nat_Fascism ------------------- ？？？
+	set_variable = { party_pop_array^22 = 0.005 }	#Nat_Autocracy ----------------- 自衛隊？
+	set_variable = { party_pop_array^23 = 0.005 }	#Monarchist -------------------- ？？？
+	
+	### Ruling Party
+	#Ji-Ji-Ko
+	add_to_array = { ruling_party = 1 }									#LDP
+	add_to_array = { gov_coalition_array = 0 } #Western_Autocracy		#LDP
+	add_to_array = { gov_coalition_array = 6 } #Conservative			#LP
+	add_to_array = { gov_coalition_array = 7 } #Autocracy				#LDP
+	add_to_array = { gov_coalition_array = 15 } #Neutral_conservatism	#NCP(CP)
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Keizo Obuchi"	#NOT Yosihro Mori
+		picture = "Keizo_Obuchi.dds"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+		}
+	}
+
+	recruit_character = JAP_koji_yamazaki
+	recruit_character = JAP_takayuki_onozuka
+	recruit_character = JAP_goro_matsumura
+	recruit_character = JAP_kiyoshi_ogawa
+	recruit_character = JAP_kimihiko_kishikawa
+	recruit_character = JAP_masafumi_akamatsu
+	recruit_character = JAP_shigeru_iwasaki
+	recruit_character = JAP_takashishi_honmatsu
+	recruit_character = JAP_kiyofumi_iwata
+	recruit_character = JAP_makiya_ota
+	recruit_character = JAP_shigeru_kobayashi
+	recruit_character = JAP_toshiya_okabe
+	recruit_character = JAP_masahiro_nagai
+	recruit_character = JAP_keiji_akahoshi
+	recruit_character = JAP_tomohisa_takei
+	recruit_character = JAP_yutaka_murakawa
+	recruit_character = JAP_tatsuhiko_takashima
+	recruit_character = JAP_natsue_kondo
+	recruit_character = JAP_katsutoshi_kawano
+	recruit_character = JAP_yoshihisa_inui
+	recruit_character = JAP_takashi_nishimura
+	recruit_character = JAP_yoshinari_marumo
+	recruit_character = JAP_shunji_izutsu
+	recruit_character = JAP_shigeki_muto
+	recruit_character = JAP_shukaku_komuta
+
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+		create_equipment_variant = {
+			name = "Harushio-Class"
+			type = diesel_attack_submarine_2
+			upgrades = {
+			}
+		}
+
+		create_equipment_variant = {
+			name = "Haruna-Class"
+			type = destroyer_2
+			upgrades = {
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Shirane-Class"
+			type = destroyer_2
+			upgrades = {
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Asagiri-Class"
+			type = missile_frigate_1
+			upgrades = {
+			}
+			obsolete = yes
+		}
+
+		create_equipment_variant = {
+			name = "Yūbari-Class"
+			type = missile_corvette_1
+			upgrades = {
+			}
+			obsolete = yes
+		}
+	}
+	#############################################
+	#MTG Variants #reminder to add Murasame frigates, Oyashio subs to construction
+	##############
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+
+
+
+		#Kongō Class https://en.wikipedia.org/wiki/Kong%C5%8D-class_destroyer
+		create_equipment_variant = {
+			name = "Kongō Class"
+			type = destroyer_hull_3
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_auxillary_slot_3 = module_vls_sam_1
+				fixed_ship_auxillary_slot_2 = module_asm_2
+				fixed_ship_auxillary_slot = module_ciws_2
+				fixed_ship_battery_slot = module_light_guns_3
+				front_1_custom_slot = module_torpedoes_2
+				mid_1_custom_slot = module_vls_asm_1
+				rear_1_custom_slot = module_light_helipad_1
+
+			}
+		}
+
+		#Murasame Class https://en.wikipedia.org/wiki/Murasame-class_destroyer_(1994)
+		create_equipment_variant = {
+			name = "Murasame Class"
+			type = destroyer_hull_3
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_auxillary_slot_3 = module_vls_sam_1
+				fixed_ship_auxillary_slot_2 = module_asm_2
+				fixed_ship_auxillary_slot = module_ciws_2
+				fixed_ship_battery_slot = module_light_guns_3
+				front_1_custom_slot = module_torpedoes_2
+				mid_1_custom_slot = module_anti_submarine_missile_2
+				rear_1_custom_slot = module_light_helipad_1
+
+			}
+		}
+
+		#Takanami Class https://en.wikipedia.org/wiki/Takanami-class_destroyer
+		create_equipment_variant = {
+			name = "Takanami Class"
+			type = destroyer_hull_3
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 2
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_4
+				fixed_ship_auxillary_slot_3 = module_vls_sam_1
+				fixed_ship_auxillary_slot_2 = module_asm_2
+				fixed_ship_auxillary_slot = module_ciws_3
+				fixed_ship_battery_slot = module_light_guns_3
+				front_1_custom_slot = module_torpedoes_2
+				mid_1_custom_slot = module_anti_submarine_missile_2
+				rear_1_custom_slot = module_light_helipad_1
+
+			}
+		}
+
+
+		#Shirane Class https://en.wikipedia.org/wiki/Shirane-class_destroyer
+		create_equipment_variant = {
+			name = "Shirane Class"
+			type = destroyer_hull_2
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_auxillary_slot_3 = module_ciws_1
+				fixed_ship_auxillary_slot_2 = module_fuel_tank
+				fixed_ship_auxillary_slot = module_aa_missiles_1
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_torpedoes_1
+				mid_1_custom_slot = module_ciws_1
+				rear_1_custom_slot = module_light_helipad_1
+
+			}
+		}
+
+
+		#Tachikaze Class https://en.wikipedia.org/wiki/Tachikaze-class_destroyer
+		create_equipment_variant = {
+			name = "Tachikaze Class"
+			type = destroyer_hull_2
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_auxillary_slot_3 = module_asm_2
+				fixed_ship_auxillary_slot_2 = module_aa_missiles_1
+				fixed_ship_auxillary_slot = module_ciws_1
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_light_guns_2
+				mid_1_custom_slot = module_torpedoes_1
+				rear_1_custom_slot = module_light_helipad_1
+			}
+		}
+
+		#Hatakaze Class https://en.wikipedia.org/wiki/Hatakaze-class_destroyer
+		create_equipment_variant = {
+			name = "Hatakaze Class"
+			type = destroyer_hull_2
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 2
+			modules = {
+				fixed_ship_engine_slot = module_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_auxillary_slot_3 = module_vls_lam_1
+				fixed_ship_auxillary_slot_2 = module_aa_missiles_1
+				fixed_ship_auxillary_slot = module_ciws_1
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_light_guns_2
+				mid_1_custom_slot = module_torpedoes_1
+				rear_1_custom_slot = module_light_helipad_1
+			}
+		}
+
+
+		#Takatsuki Class https://en.wikipedia.org/wiki/Takatsuki-class_destroyer
+		create_equipment_variant = {
+			name = "Takatsuki Class"
+			type = destroyer_hull_1
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_surface_oil_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_sonar_2
+				fixed_ship_auxillary_slot_3 = module_aa_missiles_1
+				fixed_ship_auxillary_slot_2 = module_asm_1
+				fixed_ship_auxillary_slot = module_chain_gun_3
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_torpedoes_1
+				mid_1_custom_slot = module_ciws_1
+				rear_1_custom_slot = module_anti_submarine_mortar_2
+			}
+			obsolete = yes
+		}
+
+		#Haruna Class https://en.wikipedia.org/wiki/Haruna-class_destroyer
+		create_equipment_variant = {
+			name = "Haruna Class"
+			type = destroyer_hull_1
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_surface_oil_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_auxillary_slot_3 = module_aa_missiles_1
+				fixed_ship_auxillary_slot_2 = module_asm_1
+				fixed_ship_auxillary_slot = module_chain_gun_3
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_torpedoes_1
+				mid_1_custom_slot = module_ciws_1
+				rear_1_custom_slot = module_light_helipad_1
+			}
+			obsolete = yes
+		}
+
+
+		#Yamagumo Class https://en.wikipedia.org/wiki/Yamagumo-class_destroyer
+		create_equipment_variant = {
+			name = "Yamagumo Class"
+			type = frigate_hull_1
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_asw_slot_1 = module_anti_submarine_missile_1
+				fixed_ship_asw_slot = module_torpedoes_1
+				fixed_ship_auxillary_slot = module_chain_gun_3
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_light_guns_2
+				rear_1_custom_slot = module_chain_gun_3
+			}
+		}
+
+
+		#Chikugo Class https://en.wikipedia.org/wiki/Chikugo-class_destroyer_escort
+		create_equipment_variant = {
+			name = "Chikugo Class"
+			type = frigate_hull_2
+			name_group = JAP_DE_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_asw_slot_1 = module_aa_missiles_1
+				fixed_ship_asw_slot = module_ciws_1
+				fixed_ship_auxillary_slot = module_fuel_tank
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_torpedoes_1
+				rear_1_custom_slot = module_light_helipad_1
+			}
+		}
+
+
+		#Hatsuyuki Class https://en.wikipedia.org/wiki/Hatsuyuki-class_destroyer
+		create_equipment_variant = {
+			name = "Hatsuyuki Class"
+			type = frigate_hull_2
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_asw_slot_1 = module_aa_missiles_1
+				fixed_ship_asw_slot = module_ciws_1
+				fixed_ship_auxillary_slot = module_fuel_tank
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_torpedoes_1
+				rear_1_custom_slot = module_light_helipad_1
+			}
+		}
+
+
+		#Asagiri Class https://en.wikipedia.org/wiki/Asagiri-class_destroyer
+		create_equipment_variant = {
+			name = "Asagiri Class"
+			type = frigate_hull_3
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_asw_slot_1 = module_aa_missiles_2
+				fixed_ship_asw_slot = module_ciws_2
+				fixed_ship_auxillary_slot = module_fuel_tank
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_torpedoes_2
+				rear_1_custom_slot = module_light_helipad_1
+			}
+		}
+		#Murasame Class https://en.wikipedia.org/wiki/Murasame-class_destroyer_(1994)
+		create_equipment_variant = {
+			name = "Murasame Class"
+			type = frigate_hull_3
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_asw_slot_1 = module_asm_2
+				fixed_ship_asw_slot = module_ciws_2
+				fixed_ship_auxillary_slot = module_vls_sam_1
+				fixed_ship_battery_slot = module_light_guns_3
+				front_1_custom_slot = module_torpedoes_3
+				rear_1_custom_slot = module_light_helipad_1
+			}
+		}
+
+
+		#Abukuma Class https://en.wikipedia.org/wiki/Abukuma-class_destroyer_escort
+		create_equipment_variant = {
+			name = "Abukuma Class"
+			type = corvette_hull_2
+			name_group = JAP_DE_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_auxillary_slot = module_torpedoes_2
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_ciws_2
+
+			}
+			obsolete = yes
+		}
+		#Ishikari Class https://en.wikipedia.org/wiki/JS_Ishikari
+		create_equipment_variant = {
+			name = "Ishikari Class"
+			type = corvette_hull_2
+			name_group = JAP_DE_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_auxillary_slot = module_torpedoes_2
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_asm_2
+
+			}
+			obsolete = yes
+		}
+		#Yūbari Class https://en.wikipedia.org/wiki/Y%C5%ABbari-class_destroyer_escort
+		create_equipment_variant = {
+			name = "Yūbari Class"
+			type = corvette_hull_2
+			name_group = JAP_DE_HISTORICAL
+			parent_version = 2
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_auxillary_slot = module_torpedoes_2
+				fixed_ship_battery_slot = module_light_guns_3
+				front_1_custom_slot = module_asm_2
+
+			}
+			obsolete = yes
+		}
+
+		#Uraga Class - Mine Countermeasures
+		create_equipment_variant = {
+			name = "Uraga Class"
+			type = corvette_hull_2
+			#ame_group = JAP_MODERN_CORVETTE_NAMES
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_auxillary_slot = module_mineclearing_2
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = module_chain_gun_2
+
+			}
+		}
+
+		#Osumi Class https://en.wikipedia.org/wiki/%C5%8Csumi-class_tank_landing_ship
+		create_equipment_variant = {
+			name = "Osumi Class"
+			type = helicopter_operator_hull_2
+			name_group = JAP_CV_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_auxillary_slot_3 = module_fuel_tank
+				fixed_ship_auxillary_slot_2 = module_ram_3
+				fixed_ship_auxillary_slot = module_ram_3
+				fixed_ship_battery_slot = module_ciws_3
+				front_1_custom_slot = module_helipads_2
+				mid_1_custom_slot = module_helipads_2
+				rear_1_custom_slot = module_fuel_tank
+			}
+		}
+
+
+		#Oyashio Class https://en.wikipedia.org/wiki/Oyashio-class_submarine
+		create_equipment_variant = {
+			name = "Oyashio Class"
+			type = attack_submarine_hull_3
+			name_group = JAP_SS_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_sub_diesel_electric_power
+				fixed_ship_radar_slot = module_sonar_3
+				fixed_ship_auxillary_slot_1 = module_fuel_tank
+				fixed_ship_auxillary_slot = module_torpedoes_3
+				fixed_ship_battery_slot = module_torpedoes_3
+
+			}
+		}
+
+
+		#Harushio Class https://en.wikipedia.org/wiki/Harushio-class_submarine
+		create_equipment_variant = {
+			name = "Harushio Class"
+			type = attack_submarine_hull_3
+			name_group = JAP_SS_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_sub_diesel_electric_power
+				fixed_ship_radar_slot = module_sonar_3
+				fixed_ship_auxillary_slot_1 = module_fuel_tank
+				fixed_ship_auxillary_slot = module_torpedoes_2
+				fixed_ship_battery_slot = module_torpedoes_2
+
+			}
+		}
+
+
+		#Yushio Class https://en.wikipedia.org/wiki/Y%C5%ABshio-class_submarine
+		create_equipment_variant = {
+			name = "Yushio Class"
+			type = attack_submarine_hull_2
+			name_group = JAP_SS_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_sub_diesel_electric_power
+				fixed_ship_radar_slot = module_sonar_2
+				fixed_ship_auxillary_slot_1 = module_fuel_tank
+				fixed_ship_auxillary_slot = module_torpedoes_1
+				fixed_ship_battery_slot = module_torpedoes_1
+
+			}
+			obsolete = yes
+		}
+	}
+	#############################################
+}
+
+2017.1.1 = {
+	capital = 615
+	#oob = "JAP_2017"
+	oob = "JAP_2017_MDMOSJAP"
+	add_manpower = -4513	#CRF
+	add_manpower = -2883	#ARDB
+	
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+			set_naval_oob = "JAP_2017_naval_mtg"
+		else = {
+			set_naval_oob = "JAP_2017_naval_legacy"
+		}
+	}
+	set_convoys = 500
+	set_fuel_ratio = 0.55
+	
+	set_political_power = 1911	#TO 1916
+	set_stability = 0.35	#TO 0.52: 0.47 + ( 0.05) BY PLANNED OBAMA EVENT
+	set_war_support = 0.88	#TO 0.69: 0.74 + (-0.05) BY PLANNED OBAMA EVENT
+	
+	army_experience = 500
+	navy_experience = 450
+	air_experience = 120
+	add_command_power = 140
+	
+	create_import = { resource = oil factories = 2 exporter = SAU }
+	create_import = { resource = oil factories = 1 exporter = UAE }
+	
+	create_import = { resource = aluminium factories = 7 exporter = CHI }
+	create_import = { resource = aluminium factories = 1 exporter = SOV }
+	create_import = { resource = aluminium factories = 1 exporter = UAE }
+	create_import = { resource = aluminium factories = 1 exporter = GER }
+	
+	create_import = { resource = tungsten factories = 4 exporter = CHI }
+	create_import = { resource = tungsten factories = 2 exporter = AST }
+	create_import = { resource = tungsten factories = 3 exporter = CHL }
+	create_import = { resource = tungsten factories = 1 exporter = IND }
+	create_import = { resource = tungsten factories = 1 exporter = SOV }
+	
+	remove_ideas = {
+		#pop_050
+		#article_nine_jap
+		shinto
+		g7_member
+		idea_mdmosjap_JAP_depopulation_0
+		idea_mdmosjap_JAP_earthquake_resistance_standards_2
+		idea_mdmosjap_JAP_japanese_article_9
+		#JAP_deflation
+		idea_mdmosjap_JAP_bubble_burst
+		idea_mdmosjap_JAP_komeito
+		idea_mdmosjap_JAP_postwar_authorities
+		idea_mdmosjap_JAP_shingakuryokukan_education
+		idea_mdmosjap_JAP_jsdf
+		idea_mdmosjap_JAP_defence_agency
+		#idea_mdmosjap_JAP_three_principles_on_arms_export
+		idea_mdmosjap_JAP_three_non_nuclear_principles
+		idea_mdmosjap_JAP_DJI_SOFA
+		
+		modest_corruption
+	#	gdp_8
+		recession
+		#depression		#Changed to 'recession' because more slower construction time calculated NEGATIVE NUMBER in foreign investment time.
+		defence_01
+		consumption_economy
+		edu_03
+		health_05
+		social_05
+		bureau_05
+		police_03
+		volunteer_army
+		volunteer_women
+		officer_military_school
+		Major_Non_NATO_Ally
+		western_country
+		#medium_far_right_movement
+		maritime_industry
+		industrial_conglomerates
+		small_medium_business_owners
+		#hybrid
+		#tax_cost_31
+	}
+	
+	add_ideas = {
+		idea_JAP_emperor_akihito
+		
+		#pop_050
+		#article_nine_jap
+		shinto
+		g7_member
+		idea_mdmosjap_JAP_depopulation_0
+		idea_mdmosjap_JAP_earthquake_resistance_standards_2
+		idea_mdmosjap_JAP_japanese_article_9
+		#JAP_deflation
+		idea_mdmosjap_JAP_komeito
+		idea_mdmosjap_JAP_abductionleague
+		idea_mdmosjap_JAP_jsdf2
+		idea_mdmosjap_JAP_intern_training
+		idea_mdmosjap_JAP_three_non_nuclear_principles
+		idea_mdmosjap_JAP_aftermath_of_311
+		idea_mdmosjap_JAP_ecocap3
+		idea_mdmosjap_JAP_sci0
+		idea_mdmosjap_JAP_defence_ministry3
+		idea_mdmosjap_JAP_sealds
+		idea_mdmosjap_JAP_educon3tot1
+		idea_mdmosjap_JAP_democracy_biz1tot2
+		idea_mdmosjap_JAP_defence_ministry5jingo2
+		idea_mdmosjap_JAP_media_tot2
+		
+		medium_corruption
+	#	gdp_8
+		stagnation
+		defence_02
+		consumption_economy
+		edu_03
+		health_05
+		social_04
+		bureau_03
+		police_03
+		volunteer_army
+		volunteer_women
+		officer_military_academy
+		Major_Non_NATO_Ally
+		western_country
+		medium_far_right_movement
+		maritime_industry
+		industrial_conglomerates
+		small_medium_business_owners
+		#hybrid
+		#tax_cost_31
+		
+		limited_power_projection	#added in 1.3.1 for Djibouti
+		
+		#DEFENCE COMPANIES
+		JAP_howa_machinery_infantry_weapon_company
+		JAP_mitsubishi_heavy_industries_vehicle_company
+		JAP_mitsubishi_aerospace_aircraft_company
+		JAP_mitsubishi_aerospace_helicopter_company
+		JAP_kawasaki_shipbuilding_ship_company
+		JAP_kawasaki_shipbuilding_submarine_company
+	}
+	
+	#Depopulation Idea
+#	set_variable = { mdmosjap_var_depopulating_virtual_rates = -0.590 }
+#	set_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 0 }
+	
+	#set_country_flag = gdp_9
+	set_country_flag = TPP_Signatory
+	set_country_flag = Major_Non_NATO_Ally
+	set_country_flag = Major_Importer_US_Arms #Trends-in-international-arms-transfers-2016.pdf
+	
+#	set_country_flag = positive_maritime_industry
+#	set_country_flag = enthusiastic_industrial_conglomerates
+#	set_country_flag = positive_small_medium_business_owners
+#	set_country_flag = hostile_labour_unions
+#	set_country_flag = positive_international_bankers
+#	set_country_flag = positive_fossil_fuel_industry
+#	set_country_flag = positive_landowners
+#	set_country_flag = indifferent_farmers
+
+	set_variable = { maritime_industry_opinion = 60 }
+	set_variable = { industrial_conglomerates_opinion = 80 }
+	set_variable = { small_medium_business_owners_opinion = 60 }
+	set_variable = { defense_industry_opinion = 50 }
+	set_variable = { the_military_opinion = 50 }
+	set_variable = { intelligence_community_opinion = 50 }
+	set_variable = { labour_unions_opinion = 45 }
+	set_variable = { international_bankers_opinion = 55 }
+	set_variable = { fossil_fuel_industry_opinion = 60 }
+	set_variable = { landowners_opinion = 60 }
+	set_variable = { farmers_opinion = 50 }
+	set_variable = { the_priesthood_opinion = 50 }
+	
+	set_variable = { var = debt value = 7409 }
+		#Source: https://www.mof.go.jp/tax_policy/summary/condition/a02.htm#a04
+	set_variable = { var = treasury value = 924 }
+		#Source: https://www.mof.go.jp/budget/budger_workflow/account/fy2017/ke3011b.html
+	set_variable = { var = int_investments value = 1357 }
+		#Source: https://www.jetro.go.jp/ext_images/world/japan/stats/fdi/data/18fdistock01_jp.xls
+		#Rate in 2016: https://ecodb.net/exec/trans_exchange.php?b=JPY&c1=USD&ym=Y&s=&e
+	set_variable = { var = corporate_tax_rate value = 23 }
+		#Source: https://www.mof.go.jp/tax_policy/summary/corporation/082.pdf
+	set_variable = { var = population_tax_rate value = 24 }
+		#Estimated By: https://www.dir.co.jp/report/research/law-research/tax/20180621_020168.pdf
+	
+	#set_variable = { var = tax_rate value = 30 }	#OBSOLETED
+		#Source: https://www.oecd.org/tax/revenue-statistics-japan.pdf (2016)
+	
+	#set_variable = { var = size_modifier value = 15.26 } #72 CIC
+	#initial_money_setup = yes
+	
+	#Nat focus
+	
+	#diplomatic_relation = {
+	#	country = DJI
+	#	relation = military_access
+	#	active = yes
+	#}
+	
+	#complete_national_focus = bonus_tech_slots
+	#complete_national_focus = Generic_4K_GDPC_slot
+	#complete_national_focus = Generic_15K_GDPC_slot
+	#complete_national_focus = Generic_30K_GDPC_slot
+	#complete_national_focus = Generic_4_IC_slot
+	#complete_national_focus = Generic_8_IC_slot
+	#complete_national_focus = Generic_16_IC_slot
+	#complete_national_focus = Generic_30_IC_slot
+	#complete_national_focus = Generic_50_IC_slot
+	#complete_national_focus = Generic_85_IC_slot
+	
+	#Effect Applied
+	complete_national_focus = JAP_saitama_new_downtown
+	complete_national_focus = JAP_okinawa_infrastructure
+	complete_national_focus = JAP_finish_nishiseto
+	complete_national_focus = JAP_re_adjustment_western
+	complete_national_focus = JAP_setouchi_industrial
+	complete_national_focus = JAP_kitakyushu_industrial
+	complete_national_focus = JAP_resurrection_of_shipbuilding
+	complete_national_focus = JAP_hokuriku_industrial
+	complete_national_focus = JAP_sendai_industrial
+	complete_national_focus = JAP_expand_hokuriku_shinkansen
+	complete_national_focus = JAP_subprefectrual_bureau
+	complete_national_focus = JAP_hokuriku_granary
+	complete_national_focus = JAP_re_adjustment_eastern
+	complete_national_focus = JAP_expand_tohoku_shinkansen
+	complete_national_focus = JAP_merge_ctv
+	complete_national_focus = JAP_shintomei
+	complete_national_focus = JAP_kombinat
+	complete_national_focus = JAP_strategic_zone
+	complete_national_focus = JAP_k_computer
+	complete_national_focus = JAP_memory_of_heisei
+	complete_national_focus = JAP_northern_kanto_infrastructure_restruction
+	complete_national_focus = JAP_tohoku_infrastructure_restruction
+	complete_national_focus = JAP_middle_east_and_africa
+	complete_national_focus = JAP_oil_diplomacy
+	complete_national_focus = JAP_pan_american_bureau
+	complete_national_focus = JAP_european_bureau
+	complete_national_focus = JAP_lessons_of_eur_history
+	complete_national_focus = JAP_eurasian_crossroads
+	complete_national_focus = JAP_jpn_sov_exchange
+	complete_national_focus = JAP_asia_and_oceania
+	complete_national_focus = JAP_jpn_kor_exchange
+	complete_national_focus = JAP_jpn_comchina_exchange
+	complete_national_focus = JAP_jpn_demchina_exchange
+	complete_national_focus = JAP_tibet_and_east_turkestan
+	complete_national_focus = JAP_support_taiwan
+	complete_national_focus = JAP_jpn_ast_nzl_exchange
+	complete_national_focus = JAP_jpn_asean_exchange
+	
+	#Bypassing Associated Events
+	unlock_national_focus = JAP_trinity_reform
+	unlock_national_focus = JAP_large_boned_policy
+	unlock_national_focus = JAP_japalib
+	unlock_national_focus = JAP_deregulate_temporary_staffing
+	unlock_national_focus = JAP_reflation_policy
+	unlock_national_focus = JAP_intern_training
+	unlock_national_focus = JAP_central_government_reform
+	unlock_national_focus = JAP_without_sanctuaries
+	unlock_national_focus = JAP_marketising_test
+	unlock_national_focus = JAP_gru
+	unlock_national_focus = JAP_path_of_centralise
+	unlock_national_focus = JAP_rationalise_legal_interpretation
+	unlock_national_focus = JAP_education_rebuilding
+	unlock_national_focus = JAP_alpha_influencer
+	unlock_national_focus = JAP_neutral_journalism
+	unlock_national_focus = JAP_conservative_life
+	unlock_national_focus = JAP_jiko_sekinin
+	unlock_national_focus = JAP_new_dotoku
+	unlock_national_focus = JAP_revision
+	unlock_national_focus = JAP_commercialism_science
+	unlock_national_focus = JAP_selection_and_concentration
+	unlock_national_focus = JAP_3_11_disaster
+	unlock_national_focus = JAP_removal_of_debris
+	unlock_national_focus = JAP_repair_power_transmission
+	unlock_national_focus = JAP_emergency_restruction_tax
+	unlock_national_focus = JAP_aid_tepco
+	unlock_national_focus = JAP_restart_nuke_plant
+	unlock_national_focus = JAP_toughen_our_land
+	unlock_national_focus = JAP_wot_threat
+	unlock_national_focus = JAP_amamioshima
+	unlock_national_focus = JAP_defensive_legislation
+	unlock_national_focus = JAP_officer_candidate_school
+	unlock_national_focus = JAP_jgsdf_doctrine
+	unlock_national_focus = JAP_jmsdf_doctrine
+	unlock_national_focus = JAP_jasdf_doctrine
+	unlock_national_focus = JAP_ministry_of_defence
+	unlock_national_focus = JAP_crf
+	unlock_national_focus = JAP_cyber_defence_command
+	unlock_national_focus = JAP_submarine_program
+	unlock_national_focus = JAP_air_base_project
+	unlock_national_focus = JAP_fighter_x
+	unlock_national_focus = JAP_j_alert
+	unlock_national_focus = JAP_jaxa_new_satellite
+	unlock_national_focus = JAP_protection_act
+	unlock_national_focus = JAP_proactive_pacifism
+	unlock_national_focus = JAP_defence_budget
+	unlock_national_focus = JAP_anti_sea_piracy
+	unlock_national_focus = JAP_permit_sofa
+	unlock_national_focus = JAP_henoko_new_base
+	unlock_national_focus = JAP_last_apologize
+	unlock_national_focus = JAP_abductees_support_league
+	unlock_national_focus = JAP_visit_north
+	unlock_national_focus = JAP_senkaku_nationalization
+	unlock_national_focus = JAP_trade_with_oceania
+	unlock_national_focus = JAP_aid_asean_railways
+	unlock_national_focus = JAP_tpp_initiative
+	
+	#ONGOING FOCUS (24 Days Remains Actually When It's Started from 2000.1.1)
+	complete_national_focus = JAP_article_five_of_treaty
+	
+	set_country_flag = MDMOSJAP_NF_STRATEGIC_ZONE
+	set_country_flag = MDMOSJAP_NF_LARGE_BONED
+	set_country_flag = MDMOSJAP_NF_JAPALIB
+	set_country_flag = MDMOSJAP_POSTAL_PRIVATISATION
+	set_country_flag = MDMOSJAP_NF_EDU_REBUILDING
+	set_country_flag = MDMOSJAP_NF_COAX_KISHA_CLUB
+	set_country_flag = MDMOSJAP_NF_EDU_CONSERVATIVE
+	set_country_flag = MDMOSJAP_NF_REVISION
+	set_country_flag = MDMOSJAP_NF_RESTART_NUKE_PLANT
+	set_country_flag = MDMOSJAP_NF_PROTECTION_ACT_STEAMROLLERED
+	set_country_flag = MDMOSJAP_NF_EXCLUSIVELY_DEFENSIVE
+	set_country_flag = MDMOSJAP_NF_DEFENCE_BUDGET
+	set_country_flag = MDMOSJAP_MAINTAIN_SOFA
+	set_country_flag = MDMOSJAP_NF_NATIONALISE_SENKAKU
+	set_country_flag = MDMOSJAP_NF_ECONOMIC_SOUTHERN_EXPANSION
+	
+	set_country_flag = MDMOSJAP_KOKUMIN_SHINTO
+	set_country_flag = MDMOSJAP_YES_PYONGYANG_STATEMENT
+	set_country_flag = MDMOSJAP_OKIKOKUDAI
+	set_country_flag = MDMOSJAP_HENOKO_PREPARATION
+	set_country_flag = MDMOSJAP_311
+	set_country_flag = MDMOSJAP_EVENT_SEALDS_FORMED
+	set_country_flag = MDMOSJAP_AKIHITOS_OKOTOBA
+	
+	set_country_flag = MDMOSJAP_PROGOLFER_MORI
+	set_country_flag = MDMOSJAP_MORI_RESIGNED
+	set_country_flag = MDMOSJAP_AIKO
+	set_country_flag = MDMOSJAP_BATTLE_OF_AMAMIOSHIMA
+	set_country_flag = MDMOSJAP_WESTLIB_NAOTO_KAN
+	set_country_flag = MDMOSJAP_MINYU_AMALGAMATION
+	set_country_flag = MDMOSJAP_SDP_DOI_RESIGNED
+	set_country_flag = MDMOSJAP_WESTSOC_MIZUHO_FUKUSHIMA
+	set_country_flag = MDMOSJAP_NCP_DISSOLUTION
+	set_country_flag = MDMOSJAP_WESTLIB_YUKIO_HATOYAMA
+	set_country_flag = MDMOSJAP_PRIVATISATION_DEBATE
+	set_country_flag = MDMOSJAP_ALLOW_TAKESHIMA_DAY
+	set_country_flag = MDMOSJAP_HISAHITO
+	set_country_flag = MDMOSJAP_KOIZUMI_RESIGNED
+	set_country_flag = MDMOSJAP_2006_ABE_ADMINISTRATION
+	set_country_flag = MDMOSJAP_ZAITOKUKAI
+	set_country_flag = MDMOSJAP_KENKIHO_RECESSION
+	set_country_flag = MDMOSJAP_ABE_RESIGNED_I
+	set_country_flag = MDMOSJAP_JAP_LEHMAN_SHOCK
+	set_country_flag = MDMOSJAP_HAKENGIRI
+	set_country_flag = MDMOSJAP_EVENT_HAKENGIRI_STATUS_QUO
+	set_country_flag = MDMOSJAP_JAP_LEHMAN_SHOCK_RECOVER_DATE_CONFIRMED
+	set_country_flag = MDMOSJAP_FUKUDA_RESIGNED
+	#set_country_flag = MDMOSJAP_HAPPY_SCIENCE
+	set_country_flag = MDMOSJAP_YOUR_PARTY
+	set_country_flag = MDMOSJAP_ASO_RESIGNED
+	set_country_flag = MDMOSJAP_HATOYAMA_REGIME_LAUNCHED
+	set_country_flag = MDMOSJAP_EVENT_DPJ_SDP_COALITION_YES
+	set_country_flag = MDMOSJAP_EVENT_DPJ_JCP_COALITION_NO
+	set_country_flag = MDMOSJAP_OSAKA_ISHIN
+	set_country_flag = MDMOSJAP_HATOYAMA_LOOPY
+	set_country_flag = MDMOSJAP_SDP_LEFT_THE_HATOYAMA_COALITION
+	set_country_flag = MDMOSJAP_HATOYAMA_RESIGNED
+	set_country_flag = MDMOSJAP_EVENT_SENKAKU_COLLISION_WITHOUT_CAPTAIN
+	set_country_flag = MDMOSJAP_EVENT_SENKAKU_VIDEO_LIMITED
+	set_country_flag = MDMOSJAP_ANTI_NUKE_MOVEMENT
+	set_country_flag = MDMOSJAP_KAN_RESIGNED
+	set_country_flag = MDMOSJAP_EVENT_STATUE_OF_PEACE
+	set_country_flag = MDMOSJAP_EVENT_STATUE_OF_PEACE_PROTEST
+	set_country_flag = MDMOSJAP_LDP_2012_CONSTITUTION_DRAFT
+	set_country_flag = MDMOSJAP_NUCLEAR_POWER_CROSSROAD
+	set_country_flag = MDMOSJAP_EVENT_TOKYO_SKYTREE
+	set_country_flag = MDMOSJAP_GREENS_JAPAN
+#	set_country_flag = MDMOSJAP_2012_LDP_PRESIDENT_ABE
+#	set_country_flag = MDMOSJAP_ANTI_NHK
+	set_country_flag = MDMOSJAP_WESTSOC_TADATOMO_YOSHIDA
+	set_country_flag = MDMOSJAP_EVENT_MERORINQ_DIRECT_APPEAL_BLAMED
+	set_country_flag = MDMOSJAP_EVENT_INOKI_NKO_TRIP_PUNISHED
+	set_country_flag = MDMOSJAP_NIPPON_ISHIN
+	set_country_flag = MDMOSJAP_JAPAN_FIRST_PARTY
+	
+	set_country_flag = MDMOSJAP_JAP_ANTI_TERRORISM_LAW_END
+	set_country_flag = MDMOSJAP_JAP_LEHMAN_SHOCK_RECOVER_START
+	
+	#RETIRED DIETMEMBERS
+	#LDP
+	set_country_flag = MDMOSJAP_RETIREMENT_YOHEI_KONO
+	set_country_flag = MDMOSJAP_RETIREMENT_HIROMU_NONAKA
+	set_country_flag = MDMOSJAP_RETIREMENT_JUNICHIRO_KOIZUMI
+	set_country_flag = MDMOSJAP_RETIREMENT_YOSHIRO_MORI
+	set_country_flag = MDMOSJAP_RETIREMENT_TAKU_YAMASAKI
+	set_country_flag = MDMOSJAP_RETIREMENT_YASUO_FUKUDA
+	set_country_flag = MDMOSJAP_RETIREMENT_KOICHI_KATO
+	set_country_flag = MDMOSJAP_RETIREMENT_SADAKAZU_TANIGAKI
+	#DPJ-Minshin-CDP
+	set_country_flag = MDMOSJAP_RETIREMENT_YUKIO_HATOYAMA
+	#SDP
+	set_country_flag = MDMOSJAP_RETIREMENT_TAKAKO_DOI
+	
+	#EXECUTED EVENTS
+	set_country_flag = MDMOSJAP_EVENT_KATO_REBELLION_LOADED
+	set_country_flag = MDMOSJAP_KATO_REBELLION_MIYAZAWA_FACTION_IS_DEAD
+	set_country_flag = MDMOSJAP_EVENT_2000_LDP_LP_NEGOTIATION_CONTRAINDICANT_OPTION
+	set_country_flag = MDMOSJAP_EVENT_2000_LDP_LP_NEGOTIATION_FAILED
+	set_country_flag = MDMOSJAP_KATO_REBELLION_EXECUTED
+	set_country_flag = MDMOSJAP_KATO_REBELLION_FAILED_SUCCESSFULLY
+	set_country_flag = MDMOSJAP_EVENT_KATO_ONCE_QUIT_FROM_DIET
+	set_country_flag = MDMOSJAP_EVENT_NONAKA_SCANDAL
+	set_country_flag = MDMOSJAP_EVENTEXECUTED_WAR_WITH_MONTENEGRO
+	set_country_flag = MDMOSJAP_EVENTEXECUTED_KENKIHO_RECESSION
+	set_country_flag = MDMOSJAP_EVENTEXECUTED_LEHMAN_SHOCK_AFTERMATH_IN_JAPAN
+	set_country_flag = MDMOSJAP_EVENTEXECUTED_HATOYAMA_RESIGNATION
+	set_country_flag = MDMOSJAP_EVENTEXECUTED_REGIME_CHANGE_DISSAPOINTED
+	set_country_flag = MDMOSJAP_EVENTEXECUTED_KIM_HYON_HUI
+	
+	#PLANNED OR PREPARED FOR 2017 START
+	set_country_flag = MDMOSJAP_KOIZUMI_TWO_TIME_RESCUER
+	set_country_flag = MDMOSJAP_OBAMA_IN_HIROSHIMA
+	
+	#JAP_permit_sofa
+	USA = {
+		add_opinion_modifier = { target = JAP modifier = has_expressed_loyalty }
+	#	generic_grant_2_percent_influence_of_USA = yes
+	}
+	
+	#JAP_anti_sea_piracy
+	KUW = {
+		give_military_access = JAP
+	#	diplomatic_relation = { country = JAP relation = docking_rights active = yes }
+	#	diplomatic_relation = { country = JAP relation = military_access active = yes }
+	}
+	DJI = {
+		give_military_access = JAP
+	#	diplomatic_relation = { country = JAP relation = docking_rights active = yes }
+	#	diplomatic_relation = { country = JAP relation = military_access active = yes }
+	}
+#	JAP = {
+#		diplomatic_relation = { country = DJI relation = military_access active = yes }
+#	}
+	
+	#JAP_last_apologize
+	JAP = {
+		set_country_flag = MDMOSJAP_JAP_FINAL_AGREEMENT_MUTUAL
+		add_opinion_modifier = {
+			target = KOR
+			modifier = mdmosjap_opinion_KOR_final_agreement_accepted
+		}
+	}
+	KOR = {
+		set_country_flag = MDMOSJAP_KOR_FINAL_AGREEMENT_MUTUAL
+		add_opinion_modifier = {
+			target = JAP
+			modifier = mdmosjap_opinion_KOR_final_agreement_accepted
+		}
+	}
+	
+	#JAP_visit_north
+	JAP = {
+		add_opinion_modifier = { target = NKO modifier = mdmosjap_opinion_PRK_pyongyang_declaration_agreement }
+		remove_opinion_modifier = { target = NKO modifier = mdmosjap_opinion_abduction1 }
+		add_opinion_modifier = { target = NKO modifier = mdmosjap_opinion_abduction2 }
+	}
+	NKO = {
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_PRK_pyongyang_declaration_agreement }
+	}
+	
+	#JAP_senkaku_nationalization
+	#CHI = { add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_JAP_nationalised_diaoyu } }
+	#TAI = { add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_JAP_nationalised_diaoyu } }
+	939 = {
+		set_demilitarized_zone = no
+		remove_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_STATE_SENKAKU_PRIVATE_PROPERTY }
+		add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_STATE_SENKAKU_NATIONAL_PROPERTY }
+	}
+	every_other_country = {
+		limit = {
+			any_state = {
+				state = 939
+				is_claimed_by = PREV
+				NOT = { is_controlled_by = PREV }
+			}
+		}
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_JAP_nationalised_diaoyu }
+	}
+	
+	#JAP_trade_with_oceania
+	JAP = { set_country_flag = MDMOSJAP_OCEANIAN_CIVIL_INVESTMENT }
+	every_country = {
+		limit = {
+			OR = {
+				original_tag = PAU
+				original_tag = MIC
+			#	original_tag = MAR	#Marshall Islands (Old Millennium Dawn)
+				original_tag = SOL
+			#	original_tag = VAN	#Vanuatu (Old Millennium Dawn)
+			#	original_tag = NAU	#Nauru (Old Millennium Dawn)
+			#	original_tag = KIR	#Kiribati (Old Millennium Dawn)
+			#	original_tag = TUV	#Tuvalu (Old Millennium Dawn)
+				original_tag = FIJ
+			#	original_tag = SMO	#Samoa (Old Millennium Dawn)
+			#	original_tag = TON	#Tonga (Old Millennium Dawn)
+				original_tag = PLY	#Polynesia (Modern Day 4 -> Millennium Dawn Ver 1.0.0)
+			}
+		}
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_cultural_exchange }
+		reverse_add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_cultural_exchange }
+	}
+	
+	#JAP_tpp_initiative
+	every_country = {
+		limit = {
+			OR = {
+				original_tag = VIE		#Asean Member
+				original_tag = LAO
+				original_tag = SIA
+				original_tag = BRM
+				original_tag = CBD
+				original_tag = MAY
+				original_tag = SIN
+				original_tag = PHI
+				original_tag = IND
+				original_tag = BRU
+				original_tag = TIM		#Non-Asean Member
+				original_tag = PAP
+				original_tag = AST		#Australasia
+				original_tag = NZL
+				original_tag = PAU		#Oceania
+				original_tag = MIC
+			#	original_tag = MAR	#Marshall Islands (Old Millennium Dawn)
+				original_tag = SOL
+			#	original_tag = VAN	#Vanuatu (Old Millennium Dawn)
+			#	original_tag = NAU	#Nauru (Old Millennium Dawn)
+			#	original_tag = KIR	#Kiribati (Old Millennium Dawn)
+			#	original_tag = TUV	#Tuvalu (Old Millennium Dawn)
+				original_tag = FIJ
+			#	original_tag = SMO	#Samoa (Old Millennium Dawn)
+			#	original_tag = TON	#Tonga (Old Millennium Dawn)
+				original_tag = PLY	#Polynesia (Modern Day 4 -> Millennium Dawn Ver 1.0.0)
+			}
+		}
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_economic_southern_expansion }
+		reverse_add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_economic_southern_expansion }
+	}
+	
+	#By Events	
+	JAP = {
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_KOR_statue_of_peace_2 }
+	}
+	USA = {
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_JAP_statue_of_peace }
+	}
+	KOR = {
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_PRK_takeshima_day }
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_PRK_korean_school_attack_ignore }
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_JAP_statue_of_peace }
+	}
+	NKO = {
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_PRK_takeshima_day }
+		add_opinion_modifier = { target = JAP modifier = mdmosjap_opinion_PRK_korean_school_attack_ignore }
+	}
+	
+	set_technology = {		
+		naval_plane2 = 1
+		naval_plane3 = 1
+		naval_plane4 = 1
+		
+		transport_plane3 = 1
+		transport_plane4 = 1
+
+		night_vision_4 = 1
+		
+		command_control_equipment3 = 1
+		command_control_equipment4 = 1
+		
+		SP_arty_2 = 1
+		Arty_upgrade_3 = 1
+		
+	#	ENGI_MBT_4 = 1
+	#	ENGI_MBT_5 = 1
+		
+		Rec_tank_2 = 1
+		Rec_tank_3 = 1
+
+		Air_UAV1 = 1
+		
+		MBT_4 = 1
+		MBT_5 = 1
+
+	#	L_Strike_fighter1 = 1
+	#	L_Strike_fighter2 = 1
+		
+		Anti_Air_2 = 1
+		AA_upgrade_2 = 1
+		AA_upgrade_3 = 1
+		
+		SP_Anti_Air_2 = 1
+		
+		AT_upgrade_2 = 1
+		Anti_tank_2 = 1
+		
+		util_vehicle_4 = 1
+		
+		land_Drone_equipment2 = 1
+		
+		body_armor_2000 = 1
+		
+		#Engineering Tech
+		computing4 = 1
+		computing5 = 1
+		encryption3 = 1
+		decryption3 = 1
+		encryption4 = 1
+		decryption4 = 1
+		
+		edge = 1
+		internet3 = 1
+		umts = 1
+		wifi = 1
+		internet4 = 1
+		hsupa = 1
+	#	lte = 1
+	#	wimax = 1
+		
+		construction3 = 1
+		construction4 = 1
+		construction5 = 1
+		construction6 = 1
+		excavation3 = 1
+		excavation4 = 1
+		excavation5 = 1
+		excavation6 = 1
+		
+		#energy_efficiency3 = 1
+		#energy_efficiency4 = 1
+		#energy_efficiency5 = 1
+		
+		#Industrial Tech
+		high_speed_rail = 1
+		modern_high_speed_rail = 1
+		freight_locomotive = 1
+		
+		early_ai_robotics = 1
+		humanoid_robot = 1
+		advanced_industrial_robotics = 1
+		smart_drones = 1
+		
+		advanced_ai = 1
+		modern_deep_learning = 1
+		
+		inorganic_fibers_fabrication = 1
+		industrial_production_of_nanofibers = 1
+		nanofibers_in_medicine = 1
+		
+		self-replicated_3D_printer = 1
+		commercial_nanomanufacturing = 1
+		modern_3D_printing = 1
+		centrifugal_spinning = 1
+		
+		gene_therapy = 1
+		genetically_modified_crops = 1
+		gene_targeting_pesticides = 1
+		synthetic_life = 1
+		
+		human_genome_project = 1
+		
+		crispr = 1
+		cas9_gene_editing = 1
+		tracrrna = 1
+	}
+	if = {	#Naval Tech Without MtG Mod
+		limit = {
+			not = { has_dlc = "Man the Guns" }
+		}
+		set_technology = {
+			LHA_0 = 1
+			LHA_1 = 1
+			LHA_2 = 1 #Hyūga & Izumo class helicopter destroyer (2000's) 2015 in game
+			
+			LPD_2 = 1
+		
+			missile_destroyer_3 = 1 #Atago-class destroyer (2004)
+			missile_destroyer_4 = 1 #Akizuki-class destroyer (2010)
+			
+			missile_frigate_3 = 1 #Takanami-class destroyer (2003) (considered a frigate by many)
+			
+			diesel_attack_submarine_4 = 1 #S�?ryū-class
+		}
+	}
+	if = {	#Naval Tech With MtG Mod
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_technology = {
+			corvette_hull_1 = 1
+			corvette_hull_2 = 1
+			corvette_hull_3 = 1
+			corvette_hull_4 = 1
+
+			frigate_hull_1 = 1
+			frigate_hull_2 = 1
+			frigate_hull_3 = 1
+			frigate_hull_4 = 1
+			frigate_hull_5 = 1
+
+			destroyer_hull_1 = 1
+			destroyer_hull_2 = 1
+			destroyer_hull_3 = 1
+			destroyer_hull_4 = 1
+			destroyer_hull_5 = 1
+
+		#	cruiser_hull_1 = 1
+
+		#	battleship_hull_1 = 1
+
+			helicopter_operator_hull_1 = 1
+			helicopter_operator_hull_2 = 1
+			helicopter_operator_hull_3 = 1
+
+			attack_submarine_hull_1 = 1
+			attack_submarine_hull_2 = 1
+			attack_submarine_hull_3 = 1
+			attack_submarine_hull_4 = 1
+			attack_submarine_hull_5 = 1
+
+			missile_submarine_hull_1 = 1
+			missile_submarine_hull_2 = 1
+			missile_submarine_hull_3 = 1
+			missile_submarine_hull_4 = 1
+			missile_submarine_hull_5 = 1
+
+			aircraft_carrier_engineering = 1
+			aircraft_carrier_engineering_1 = 1
+			aircraft_heli_engineering_1 = 1
+			aircraft_heli_engineering_2 = 1
+			aircraft_heli_engineering_3 = 1
+
+			tech_submarine_engineering = 1
+			tech_submarine_engineering_1 = 1
+			tech_submarine_engineering_2 = 1
+			tech_submarine_engineering_3 = 1
+			tech_submarine_engineering_4 = 1
+
+			tech_naval_systems_engineering = 1
+			tech_power_systems = 1
+			tech_power_systems_1 = 1
+			tech_nuclear_power_systems = 1
+			tech_nuclear_power_systems_1 = 1
+			tech_nuclear_power_systems_2 = 1
+
+			tech_combat_support_systems = 1
+			tech_fire_control = 1
+			tech_fire_control_1 = 1
+			tech_fire_control_2 = 1
+			tech_combat_radar = 1
+			tech_combat_radar_1 = 1
+			tech_combat_radar_2 = 1
+			tech_combat_radar_3 = 1
+			tech_combat_radar_4 = 1
+			tech_combat_sonar = 1
+			tech_combat_sonar_1 = 1
+			tech_combat_sonar_2 = 1
+			tech_combat_sonar_3 = 1
+			tech_combat_sonar_4 = 1
+
+			tech_naval_weapon_systems = 1
+			tech_light_guns = 1
+			tech_light_guns_1 = 1
+			tech_light_guns_2 = 1
+			tech_heavy_guns = 1
+			tech_heavy_guns_1 = 1
+
+			tech_point_defense_system = 1
+			tech_point_defense_system_1 = 1
+			tech_point_defense_system_2 = 1
+			tech_point_defense_system_3 = 1
+			tech_point_defense_system_4 = 1
+			tech_point_defense_system_5 = 1
+
+			tech_missile_systems = 1
+			tech_turret_missiles_surface = 1
+			tech_turret_missiles_surface_1 = 1
+			tech_turret_missiles_surface_2 = 1
+			tech_turret_missiles_surface_3 = 1
+
+			tech_turret_missiles_aa = 1
+			tech_turret_missiles_aa_1 = 1
+			tech_turret_missiles_aa_2 = 1
+			tech_turret_missiles_aa_3 = 1
+
+			tech_vls_surface = 1
+			tech_vls_surface_1 = 1
+			tech_vls_surface_2 = 1
+			tech_vls_surface_3 = 1
+
+			tech_vls_aa = 1
+			tech_vls_aa_1 = 1
+			tech_vls_aa_2 = 1
+			tech_vls_aa_3 = 1
+
+			tech_torpedoes = 1
+			tech_torpedoes_1 = 1
+			tech_torpedoes_2 = 1
+			tech_torpedoes_3 = 1
+			tech_torpedoes_4 = 1
+
+			tech_asw_systems = 1
+			tech_asw_systems_1 = 1
+			tech_asw_systems_2 = 1
+			tech_asw_systems_3 = 1
+			tech_mine_warfare = 1
+			tech_mine_warfare_1 = 1
+			tech_mine_warfare_2 = 1
+
+			tech_mtg_landing_craft = 1
+		}
+	}
+	
+#	set_popularities = {	#Until 1.6.2
+#		democratic = 50.0
+#		communism = 30.0
+#		fascism = 0.0
+#		neutrality = 10.0
+#		nationalist = 10.0
+#	}	
+	set_popularities = {
+		democratic = 49.5
+		communism = 33.5
+		fascism = 0.0
+		neutrality = 9.0
+		nationalist = 8.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2014.12.14"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	start_politics_input = yes
+
+	### Party Popularities
+	
+	set_variable = { party_pop_array^0 = 0.170 } 	#Western_Autocracy ------------- 自由民主党（親米保守）
+	set_variable = { party_pop_array^1 = 0.170 }	#conservatism ------------------ 自由民主党（漸進/リベラル）
+	set_variable = { party_pop_array^2 = 0.130 }	#liberalism -------------------- 立憲民主党
+	set_variable = { party_pop_array^3 = 0.025 }	#socialism --------------------- 社会民主党
+	
+	set_variable = { party_pop_array^4 = 0.010 }	#Communist-State --------------- 共産主義系新左翼
+	set_variable = { party_pop_array^5 = 0.010 }	#anarchist_communism ----------- 社青同系
+	set_variable = { party_pop_array^6 = 0.065 }	#Conservative ------------------ 日本維新の会
+	set_variable = { party_pop_array^7 = 0.250 }	#Autocracy --------------------- 自由民主党（保守/反動）
+	set_variable = { party_pop_array^8 = 0.000 }	#Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0.000 }	#Vilayat_e_Faqih
+	
+	set_variable = { party_pop_array^10 = 0.000 }	#Kingdom
+	set_variable = { party_pop_array^11 = 0.000 }	#Caliphate
+	
+	set_variable = { party_pop_array^12 = 0.000 }	#Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0.005 }	#Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.010 }	#Neutral_conservatism ---------- れいわ新選組
+	set_variable = { party_pop_array^15 = 0.015 }	#oligarchism ------------------- 国民民主党
+	set_variable = { party_pop_array^16 = 0.000 }	#Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0.000 }	#Neutral_green ----------------- 緑の党グリーンズジャパン
+	set_variable = { party_pop_array^18 = 0.040 }	#neutral_Social ---------------- 日本共産党
+	set_variable = { party_pop_array^19 = 0.020 }	#Neutral_Communism ------------- 革共同系
+	
+	set_variable = { party_pop_array^20 = 0.015 }	#Nat_Populism ------------------ 日本第一党
+	set_variable = { party_pop_array^21 = 0.015 }	#Nat_Fascism ------------------- ？？？
+	set_variable = { party_pop_array^22 = 0.025 }	#Nat_Autocracy ----------------- 自衛隊？
+	set_variable = { party_pop_array^23 = 0.025 }	#Monarchist -------------------- ？？？
+
+	### Ruling Party
+	add_to_array = { ruling_party = 7 }
+	add_to_array = { gov_coalition_array = 0 }
+	add_to_array = { gov_coalition_array = 1 }
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Shinzo Abe" picture = "Shinzo_Abe.dds" ideology = Conservative
+		traits = { western_conservatism emotional zealous stubborn wgip antikorea }
+	#	traits = { western_conservatism }
+	}
+	addcheck_mdmosjap_JAP_zaitokukai = yes
+	
+	if = {
+		limit = { NOT = { has_dlc = "Man the Guns" } }
+		create_equipment_variant = {
+			name = "Izumo-class"
+			type = LPD_2
+			upgrades = {
+			}
+		}
+		create_equipment_variant = {
+			name = "Improved Atago-Class"
+			type = missile_destroyer_3
+			upgrades = {
+			}
+		}
+	}
+	
+	#############################################
+	#MTG Variants	#add construction of Asahi destroyer, Soryu sub
+	##############
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+
+		#Izumo Class
+		create_equipment_variant = {
+			name = "Izumo Class"
+			type = helicopter_operator_hull_3
+			name_group = JAP_CV_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_advanced_integrated_missile_radar_control
+				fixed_ship_radar_slot = module_radar_6
+				fixed_ship_auxillary_slot_3 = module_ram_4
+				fixed_ship_auxillary_slot_2 = module_fuel_tank
+				fixed_ship_auxillary_slot = module_ram_4
+				fixed_ship_battery_slot = module_ciws_5
+				front_1_custom_slot = module_light_flight_deck_1
+				mid_1_custom_slot = module_helipads_3
+				rear_1_custom_slot = module_light_flight_deck_1
+			}
+		}
+
+		#Hyūga Class https://en.wikipedia.org/wiki/Hy%C5%ABga-class_helicopter_destroyer
+		create_equipment_variant = {
+			name = "Hyūga Class"
+			type = helicopter_operator_hull_2
+			name_group = JAP_CV_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_5
+				fixed_ship_auxillary_slot_3 = module_fuel_tank
+				fixed_ship_auxillary_slot_2 = module_fuel_tank
+				fixed_ship_auxillary_slot = module_ciws_4
+				fixed_ship_battery_slot = module_ram_3
+				front_1_custom_slot = module_helipads_2
+				mid_1_custom_slot = module_helipads_2
+				rear_1_custom_slot = module_helipads_2
+			}
+		}
+
+		#Akizuki Class https://en.wikipedia.org/wiki/Akizuki-class_destroyer_(2010)#/media/File:DD-115_Akizuki_in_Wakayama.jpg
+		create_equipment_variant = {
+			name = "Akizuki Class"
+			type = destroyer_hull_4
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_5
+				fixed_ship_auxillary_slot_3 = module_vls_sam_3
+				fixed_ship_auxillary_slot_2 = module_vls_asm_3
+				fixed_ship_auxillary_slot = module_asm_4
+				fixed_ship_battery_slot = module_light_guns_5
+				front_1_custom_slot = module_torpedoes_4
+				mid_1_custom_slot = module_ciws_4
+				rear_1_custom_slot = module_light_helipad_2
+			}
+		}
+
+		#Atago Class https://en.wikipedia.org/wiki/Atago-class_destroyer
+		create_equipment_variant = {
+			name = "Atago Class"
+			type = destroyer_hull_4
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_5
+				fixed_ship_auxillary_slot_3 = module_vls_sam_2
+				fixed_ship_auxillary_slot_2 = module_asm_2
+				fixed_ship_auxillary_slot = module_ciws_3
+				fixed_ship_battery_slot = module_light_guns_3
+				front_1_custom_slot = module_torpedoes_2
+				mid_1_custom_slot = module_vls_asm_1
+				rear_1_custom_slot = module_light_helipad_2
+
+			}
+		}
+
+		#Maya Class https://en.wikipedia.org/wiki/Maya-class_destroyer
+		create_equipment_variant = {
+			name = "Maya Class"
+			type = destroyer_hull_4
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_advanced_integrated_missile_radar_control
+				fixed_ship_radar_slot = module_radar_6
+				fixed_ship_auxillary_slot_3 = module_vls_sam_3
+				fixed_ship_auxillary_slot_2 = module_asm_3
+				fixed_ship_auxillary_slot = module_ciws_4
+				fixed_ship_battery_slot = module_light_guns_3
+				front_1_custom_slot = module_torpedoes_2
+				mid_1_custom_slot = module_vls_asm_2
+				rear_1_custom_slot = module_light_helipad_2
+
+			}
+		}
+
+		#Asahi Class https://en.wikipedia.org/wiki/Asahi-class_destroyer
+		create_equipment_variant = {
+			name = "Asahi Class"
+			type = destroyer_hull_5
+			name_group = JAP_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_advanced_integrated_missile_radar_control
+				fixed_ship_radar_slot = module_radar_6
+				fixed_ship_auxillary_slot_3 = module_vls_sam_3
+				fixed_ship_auxillary_slot_2 = module_vls_asm_3
+				fixed_ship_auxillary_slot = module_ciws_5
+				fixed_ship_battery_slot = module_light_guns_5
+				front_1_custom_slot = module_torpedoes_4
+				mid_1_custom_slot = module_asm_3
+				rear_1_custom_slot = module_light_helipad_2
+
+			}
+		}
+
+		#Soryu Class https://en.wikipedia.org/wiki/S%C5%8Dry%C5%AB-class_submarine
+		create_equipment_variant = {
+			name = "Soryu Class"
+			type = attack_submarine_hull_4
+			name_group = JAP_SS_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_sub_diesel_electric_power
+				fixed_ship_radar_slot = module_sonar_5
+				fixed_ship_auxillary_slot_2 = module_fuel_tank
+				fixed_ship_auxillary_slot_1 = module_torpedoes_4
+				fixed_ship_auxillary_slot = module_torpedoes_4
+				fixed_ship_battery_slot = module_torpedoes_4
+
+			}
+		}
+
+		#Taigei Class https://en.wikipedia.org/wiki/Taigei-class_submarine
+		create_equipment_variant = {
+			name = "Taigei Class"
+			type = attack_submarine_hull_5
+			name_group = JAP_SS_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_sub_diesel_electric_power
+				fixed_ship_radar_slot = module_sonar_6
+				fixed_ship_auxillary_slot_2 = module_fuel_tank
+				fixed_ship_auxillary_slot_1 = module_torpedoes_5
+				fixed_ship_auxillary_slot = module_vls_sub_asm_3
+				fixed_ship_battery_slot = module_torpedoes_5
+
+			}
+		}
+
+		#Mogami Class
+		create_equipment_variant = {
+			name = "Mogami Class"
+			type = frigate_hull_5
+			#name_group = JAPAN
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_advanced_integrated_missile_radar_control
+				fixed_ship_radar_slot = module_radar_5
+				fixed_ship_asw_slot_1 = module_ram_4
+				fixed_ship_asw_slot = module_asm_4
+				fixed_ship_auxillary_slot = module_vls_sam_3
+				fixed_ship_battery_slot = module_light_guns_3
+				front_1_custom_slot = module_torpedoes_4
+				rear_1_custom_slot = module_light_helipad_2
+
+			}
+		}
+
+		#Awaji Class - Mine Countermeasures
+		create_equipment_variant = {
+			name = "Awaji Class"
+			type = corvette_hull_4
+			#name_group = JAP_MODERN_CORVETTE_NAMES
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_4
+				fixed_ship_auxillary_slot = module_mineclearing_3
+				fixed_ship_battery_slot = module_light_guns_2
+				front_1_custom_slot = empty
+			}
+		}
+	}
+	#############################################
+}

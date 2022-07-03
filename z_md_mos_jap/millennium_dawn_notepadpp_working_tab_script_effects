@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="1">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2730" startPos="795" endPos="835" selMode="0" offset="0" wrapCount="1" lang="C#" encoding="-1" userReadOnly="no" filename="D:\Users\YMosuiPvt2017\Documents\Paradox Interactive\Hearts of Iron IV\mod\z_md_mos_jap\common\scripted_triggers\mdmosjap_JAP_scripted_triggers.txt" backupFilePath="" originalFileLastModifTimestamp="-77556867" originalFileLastModifTimestampHigh="30835452" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="-2130706303" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="966" xOffset="0" scrollWidth="2730" startPos="195" endPos="229" selMode="0" offset="0" wrapCount="1" lang="Hoi4 Modding" encoding="-1" userReadOnly="no" filename="D:\Users\YMosuiPvt2017\Documents\Paradox Interactive\Hearts of Iron IV\mod\z_md_mos_jap\common\scripted_effects\mdmosjap_JAP_scripted_effects.txt" backupFilePath="" originalFileLastModifTimestamp="-617533869" originalFileLastModifTimestampHigh="30923069" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="7536751" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

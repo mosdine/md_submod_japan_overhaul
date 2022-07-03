@@ -1,0 +1,5 @@
+RYU = "countries/Ryukyu.txt"
+KOJ = "countries/Korean Republic.txt"
+JPC = "countries/United National Government.txt"
+JPK = "countries/Japan Restoration Government.txt"
+JPW = "countries/Liberal Democratic Government.txt"
