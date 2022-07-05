@@ -31,17 +31,6 @@
 	
 	create_import = { resource = chromium factories = 1 exporter = SOV }
 	
-	617 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_HOKKAIDO } }
-	616 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_TOHOKU } }
-	613 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_CHUBU } }
-	612 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_KANSAI } }
-	611 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_CHUGOKU } }
-	610 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_SHIKOKU } }
-	609 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_KYUSHU } }
-	615 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_KANTO } }
-	
-	939 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_STATE_SENKAKU_PRIVATE_PROPERTY } }
-	
 	add_ideas = {
 		idea_JAP_emperor_akihito
 		
@@ -49,7 +38,7 @@
 		#article_nine_jap
 		shinto
 		g7_member
-		idea_mdmosjap_JAP_depopulation_0
+	#	idea_mdmosjap_JAP_depopulation_0
 		idea_mdmosjap_JAP_earthquake_resistance_standards_2
 		idea_mdmosjap_JAP_japanese_article_9
 		#JAP_deflation
@@ -86,18 +75,27 @@
 		#tax_cost_31
 	}
 	
-	#Depopulation Idea
-#	set_variable = { mdmosjap_var_depopulating_virtual_rates = -0.250 }
-#	set_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 0 }
-	
+	#Depopulation Modifier
+	set_variable = { mdmosjap_var_depopulating_virtual_rates = -0.700 }
+	set_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 0 }
+	set_variable = { mdmosjap_var_depopulating_healthcare_impact = 0.200 }
+	set_variable = { mdmosjap_var_depopulating_social_cost_impact = 0.200 }
+	add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_idea_mdmosjap_JAP_depopulation }
+	#Radicalism Modifier
+	add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_CONRAD_LEFTRAD }
+	add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_CONRAD_RIGHTRAD }
 	#Tokyo Centralisation Modifier
-	add_dynamic_modifier = {
-		modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_CONRAD_LEFTRAD
-	}
-	add_dynamic_modifier = {
-		modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_CONRAD_RIGHTRAD
-	}
-
+	617 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_HOKKAIDO } }
+	616 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_TOHOKU } }
+	613 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_CHUBU } }
+	612 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_KANSAI } }
+	611 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_CHUGOKU } }
+	610 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_SHIKOKU } }
+	609 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_KYUSHU } }
+	615 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_KANTO } }
+	#Senkaku Island Modifier
+	939 = { add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_MDMOSJAP_JAP_STATE_SENKAKU_PRIVATE_PROPERTY } }
+	
 	capital = 615
 	#oob = "JAP_2000"
 	oob = "JAP_2000_MDMOSJAP"
@@ -1202,7 +1200,7 @@
 		#article_nine_jap
 		shinto
 		g7_member
-		idea_mdmosjap_JAP_depopulation_0
+	#	idea_mdmosjap_JAP_depopulation_0
 		idea_mdmosjap_JAP_earthquake_resistance_standards_2
 		idea_mdmosjap_JAP_japanese_article_9
 		#JAP_deflation
@@ -1247,7 +1245,7 @@
 		#article_nine_jap
 		shinto
 		g7_member
-		idea_mdmosjap_JAP_depopulation_0
+	#	idea_mdmosjap_JAP_depopulation_0
 		idea_mdmosjap_JAP_earthquake_resistance_standards_2
 		idea_mdmosjap_JAP_japanese_article_9
 		#JAP_deflation
@@ -1299,9 +1297,12 @@
 		JAP_kawasaki_shipbuilding_submarine_company
 	}
 	
-	#Depopulation Idea
-#	set_variable = { mdmosjap_var_depopulating_virtual_rates = -0.590 }
-#	set_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 0 }
+	#Depopulation Modifier
+	set_variable = { mdmosjap_var_depopulating_virtual_rates = -0.870 }
+	set_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 0 }
+	set_variable = { mdmosjap_var_depopulating_healthcare_impact = 0.285 }
+	set_variable = { mdmosjap_var_depopulating_social_cost_impact = 0.285 }
+#	add_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_idea_mdmosjap_JAP_depopulation }
 	
 	#set_country_flag = gdp_9
 	set_country_flag = TPP_Signatory

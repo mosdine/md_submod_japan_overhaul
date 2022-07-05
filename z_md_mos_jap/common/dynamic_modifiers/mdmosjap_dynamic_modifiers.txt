@@ -46,6 +46,24 @@ DYNAMIC_MODIFIER_MDMOSJAP_JAP_STATE_SENKAKU_NATIONAL_PROPERTY = {
 	state_production_speed_buildings_factor = -1.00
 }
 
+#Depopulation
+DYNAMIC_MODIFIER_idea_mdmosjap_JAP_depopulation = {
+	icon = "GFX_idea_population_down"
+	enable = {
+		OR = {
+			original_tag = JAP
+			original_tag = JPC
+			original_tag = JPK
+			original_tag = JPW
+		}
+		always = yes
+	}
+	
+	monthly_population = mdmosjap_var_depopulating_virtual_rates
+	health_cost_multiplier_modifier = mdmosjap_var_depopulating_healthcare_impact
+	social_cost_multiplier_modifier = mdmosjap_var_depopulating_social_cost_impact
+}
+
 #Tokyo Centralisation
 DYNAMIC_MODIFIER_MDMOSJAP_JAP_TOKYO_CENTRALISATION_HOKKAIDO = {
 	icon = "GFX_modifiers_jap_rural_depopulation2"	

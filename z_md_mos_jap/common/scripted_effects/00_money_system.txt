@@ -1320,25 +1320,29 @@ update_health_rate = {
 	set_temp_variable = { health_cost_multiplier = 1 }
 	add_to_temp_variable = { health_cost_multiplier = modifier@health_cost_multiplier_modifier }
 	##Japan
-	if = {
-		limit = { original_tag = JAP }
-		if = {
-			limit = { has_idea = idea_mdmosjap_JAP_depopulation_1 }
-			add_to_temp_variable = { health_cost_multiplier = 0.05 }
-		}
-		if = {
-			limit = { has_idea = idea_mdmosjap_JAP_depopulation_2 }
-			add_to_temp_variable = { health_cost_multiplier = 0.10 }
-		}
-		if = {
-			limit = { has_idea = idea_mdmosjap_JAP_depopulation_3 }
-			add_to_temp_variable = { health_cost_multiplier = 0.15 }
-		}
-		if = {
-			limit = { has_idea = idea_mdmosjap_JAP_depopulation_4 }
-			add_to_temp_variable = { health_cost_multiplier = 0.20 }
-		}
-	}
+#	if = {
+#		limit = { original_tag = JAP }
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_0 }
+#			add_to_temp_variable = { health_cost_multiplier = 0.20 }
+#		}
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_1 }
+#			add_to_temp_variable = { health_cost_multiplier = 0.20 }
+#		}
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_2 }
+#			add_to_temp_variable = { health_cost_multiplier = 0.20 }
+#		}
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_3 }
+#			add_to_temp_variable = { health_cost_multiplier = 0.20 }
+#		}
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_4 }
+#			add_to_temp_variable = { health_cost_multiplier = 0.20 }
+#		}
+#	}
 
 	for_each_loop = {
 		array = array_health_spend
@@ -1414,25 +1418,29 @@ update_social_rate = {
 	set_temp_variable = { social_cost_multiplier = 1 }
 	add_to_temp_variable = { social_cost_multiplier = modifier@social_cost_multiplier_modifier }
 	##Japan
-	if = {
-		limit = { original_tag = JAP }
-		if = {
-			limit = { has_idea = idea_mdmosjap_JAP_depopulation_1 }
-			add_to_temp_variable = { social_cost_multiplier = 0.05 }
-		}
-		if = {
-			limit = { has_idea = idea_mdmosjap_JAP_depopulation_2 }
-			add_to_temp_variable = { social_cost_multiplier = 0.10 }
-		}
-		if = {
-			limit = { has_idea = idea_mdmosjap_JAP_depopulation_3 }
-			add_to_temp_variable = { social_cost_multiplier = 0.15 }
-		}
-		if = {
-			limit = { has_idea = idea_mdmosjap_JAP_depopulation_4 }
-			add_to_temp_variable = { social_cost_multiplier = 0.20 }
-		}
-	}
+#	if = {
+#		limit = { original_tag = JAP }
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_0 }
+#			add_to_temp_variable = { social_cost_multiplier = 0.20 }
+#		}
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_1 }
+#			add_to_temp_variable = { social_cost_multiplier = 0.20 }
+#		}
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_2 }
+#			add_to_temp_variable = { social_cost_multiplier = 0.20 }
+#		}
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_3 }
+#			add_to_temp_variable = { social_cost_multiplier = 0.20 }
+#		}
+#		if = {
+#			limit = { has_idea = idea_mdmosjap_JAP_depopulation_4 }
+#			add_to_temp_variable = { social_cost_multiplier = 0.20 }
+#		}
+#	}
 
 	for_each_loop = {
 		array = array_social_spend

@@ -28,6 +28,7 @@ ideas = {
 				nationalist_acceptance = -10
 				ai_focus_defense_factor = 1.000
 				lend_lease_tension = 1.00
+				health_cost_multiplier_modifier = 0.10
 			}
 			research_bonus = {
 				Cat_N_CV  = -0.20
@@ -178,66 +179,6 @@ ideas = {
 			
 			modifier = {
 				monthly_population = -0.950
-				custom_modifier_tooltip = idea_mdmosjap_JAP_depopulation_4_budget_change_TT
-					#which describes the below effect.
-					#health_cost_multiplier = 0.20
-					#social_cost_multiplier = 0.20
-					#Check 00_money_system.txt which is overwritten.
-			}
-		}
-		idea_mdmosjap_JAP_depopulation_5 = {
-			picture = population_down
-			
-			modifier = {
-				monthly_population = -1.000
-				custom_modifier_tooltip = idea_mdmosjap_JAP_depopulation_4_budget_change_TT
-					#which describes the below effect.
-					#health_cost_multiplier = 0.20
-					#social_cost_multiplier = 0.20
-					#Check 00_money_system.txt which is overwritten.
-			}
-		}
-		idea_mdmosjap_JAP_depopulation_6 = {
-			picture = population_down
-			
-			modifier = {
-				monthly_population = -1.050
-				custom_modifier_tooltip = idea_mdmosjap_JAP_depopulation_4_budget_change_TT
-					#which describes the below effect.
-					#health_cost_multiplier = 0.20
-					#social_cost_multiplier = 0.20
-					#Check 00_money_system.txt which is overwritten.
-			}
-		}
-		idea_mdmosjap_JAP_depopulation_7 = {
-			picture = population_down
-			
-			modifier = {
-				monthly_population = -1.100
-				custom_modifier_tooltip = idea_mdmosjap_JAP_depopulation_4_budget_change_TT
-					#which describes the below effect.
-					#health_cost_multiplier = 0.20
-					#social_cost_multiplier = 0.20
-					#Check 00_money_system.txt which is overwritten.
-			}
-		}
-		idea_mdmosjap_JAP_depopulation_8 = {
-			picture = population_down
-			
-			modifier = {
-				monthly_population = -1.150
-				custom_modifier_tooltip = idea_mdmosjap_JAP_depopulation_4_budget_change_TT
-					#which describes the below effect.
-					#health_cost_multiplier = 0.20
-					#social_cost_multiplier = 0.20
-					#Check 00_money_system.txt which is overwritten.
-			}
-		}
-		idea_mdmosjap_JAP_depopulation_9 = {
-			picture = population_down
-			
-			modifier = {
-				monthly_population = -1.200
 				custom_modifier_tooltip = idea_mdmosjap_JAP_depopulation_4_budget_change_TT
 					#which describes the below effect.
 					#health_cost_multiplier = 0.20

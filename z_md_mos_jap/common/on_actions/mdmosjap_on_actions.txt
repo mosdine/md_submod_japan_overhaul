@@ -39,6 +39,12 @@ on_actions = {
 					}
 					clr_country_flag = no_corporate_tax_rate_change
 				}
+				
+				if = {
+					limit = { has_dynamic_modifier = { modifier = DYNAMIC_MODIFIER_idea_mdmosjap_JAP_depopulation } }
+					set_variable = { health_cost_multiplier_modifier = mdmosjap_var_depopulating_healthcare_impact }
+					set_variable = { social_cost_multiplier_modifier = mdmosjap_var_depopulating_social_cost_impact }
+				}
 			}
 		}
 	}
@@ -164,37 +170,56 @@ on_actions = {
 		}
 	}
 	
-	on_monthly = {
+	on_monthly_JAP = {
 		effect = {
-			if = {
-				limit = { tag = JAP }
+			#JAP = {
 				ROOT = {
+					#Monthly Consciousness Decay
 					decay_mdmosjap_conrad_left = yes
 					decay_mdmosjap_conrad_right = yes
-				}
-				#Depopulation Idea
-				add_to_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 1 }
-				if = {
-					limit = {
-						OR = {
-							check_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 6 }
-							check_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter > 6 }
+					
+					#Depopulation Modifier
+					add_to_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 1 }
+					if = {
+						limit = {
+							OR = {
+								check_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 12 }
+								check_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter > 12 }
+							}
 						}
+						add_to_variable = { mdmosjap_var_depopulating_virtual_rates = -0.010 }
+						add_to_variable = { mdmosjap_var_depopulating_healthcare_impact = 0.005 }
+						add_to_variable = { mdmosjap_var_depopulating_social_cost_impact = 0.005 }
+						set_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 0 }
+						force_update_dynamic_modifier = yes
 					}
-					add_to_variable = { mdmosjap_var_depopulating_virtual_rates = -0.010 }
-					set_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 0 }
 				}
-			}
+				#Depopulation Modifier
+			#	add_to_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 1 }
+			#	if = {
+			#		limit = {
+			#			OR = {
+			#				check_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 6 }
+			#				check_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter > 6 }
+			#			}
+			#		}
+			#		add_to_variable = { mdmosjap_var_depopulating_virtual_rates = -0.010 }
+			#		set_variable = { mdmosjap_var_depopulating_virtual_rates_six_months_counter = 0 }
+			#	}
+			#}
 		}
 	}
 	
-	on_yearly = {
-		effect = {
-			JAP = {
-				
-			}
-		}
-	}
+#	on_yearly = {
+#		effect = {
+#			JAP = {
+#				#Depopulation Modifier - Budget Impact
+#				add_to_variable = { mdmosjap_var_depopulating_virtual_rates = -0.010 }
+#				add_to_variable = { mdmosjap_var_depopulating_healthcare_impact = 0.005 }
+#				add_to_variable = { mdmosjap_var_depopulating_social_cost_impact = 0.005 }
+#			}
+#		}
+#	}
 	
 	on_startup = {
 		effect = {
@@ -391,6 +416,7 @@ on_actions = {
 					MDACCESS_CALC_zero_interest_policy = yes
 				#	calculate_debt_rate = yes
 					set_variable = { check_point_debt = debt }
+				
 				}
 				
 				#2017 BOOKMARK
