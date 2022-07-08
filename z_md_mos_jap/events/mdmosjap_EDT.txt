@@ -3195,22 +3195,6 @@ country_event = {
 	}
 }
 
-#Shintaro Ishihara Passed Away
-country_event = {
-	id = mdmosjap_EDT.340201001
-	hidden = yes
-	
-	fire_only_once = yes
-	trigger = {
-		date > 2022.2.0
-		date < 2022.2.10
-	}
-	
-	option = {
-		JAP = { country_event = mdmosjap_japan.340201001 }
-	}
-}
-
 #Resignation of Suga Cabinet
 country_event = {
 	id = mdmosjap_EDT.330929001
@@ -3229,5 +3213,43 @@ country_event = {
 	
 	option = {
 		JAP = { country_event = mdmosjap_japan.330929001 }
+	}
+}
+
+#Shintaro Ishihara Passed Away
+country_event = {
+	id = mdmosjap_EDT.340201001
+	hidden = yes
+	
+	fire_only_once = yes
+	trigger = {
+		date > 2022.2.0
+		date < 2022.2.10
+	}
+	
+	option = {
+		JAP = { country_event = mdmosjap_japan.340201001 }
+	}
+}
+
+#Shinzo Abe Assassination
+country_event = {
+	id = mdmosjap_EDT.340708001
+	hidden = yes
+	
+	fire_only_once = yes
+	trigger = {
+		date > 2022.7.7
+		date < 2022.7.17
+		original_tag = JAP
+		NOT = { has_country_leader = { name = "Shinzo Abe" } }
+		OR = {
+			has_country_flag = MDMOSJAP_ABE_RESIGNED_I
+			has_country_flag = MDMOSJAP_ABE_RESIGNED_II
+		}
+	}
+	
+	option = {
+		JAP = { country_event = mdmosjap_japan.340708001 }
 	}
 }

@@ -14546,6 +14546,43 @@ country_event = {
 	}
 }
 
+#Shinzo Abe Assassination
+country_event = {
+	id = mdmosjap_japan.340708001
+	title = mdmosjap_japan.340708001.t
+	desc = mdmosjap_japan.340708001.d
+	#picture = GFX_news_event_hearts_of_iron_4
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mdmosjap_japan.340708001.oA
+		log = "[GetDateText]: [Root.GetName]: mdmosjap_japan.340708001.oA"
+		add_stability = -0.20
+		set_country_flag = MDMOSJAP_RETIREMENT_SHINZO_ABE
+		custom_effect_tooltip = MDMOSJAP_RETIREMENT_SHINZO_ABE_TT
+		news_event = mdmosjap_japannews.340708001
+	}
+}
+
+news_event = {
+	id = mdmosjap_japannews.340708001
+	title = mdmosjap_japannews.340708001.t
+	desc = mdmosjap_japannews.340708001.d
+	#picture = GFX_news_event_hearts_of_iron_4
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = mdmosjap_japannews.340708001.oA
+		log = "[GetDateText]: [Root.GetName]: mdmosjap_japannews.340708001.oA"
+	}
+}
+
+
 #----------------------------------------------------------------
 #Uncertain Future Events
 #----------------------------------------------------------------
