@@ -1,15 +1,55 @@
 0.63
 ・MD1.6.3に対応した。
-・2000年を中心にイベントによって分岐する歴史を追加しました。
+・2000年の「加藤の乱」を起点にイベントによって分岐する歴史を追加しました。
+・一極集中に関するmodifierを追加しました。
+・少子高齢化のideaはdynamic modifierに移行しました。
+・各政党の支持率変動に応じて思想の支持率も変動するようにしました。
 ・対米外交NFをすこし改修しました。
-・政府首班の輪郭を追加しました。
 ・尖閣諸島ステートは国有化をしていない限りは建築スロットが解除されないようになりました。
-・不要なバックアップ用ファイルを一つ削除しました。
+・えひめ丸事故のイベントにおいて、もはや総理大臣はゴルフを続けてもincapableのtraitは得られません。 
+・日本のAIが税率を操作しないように試験的に導入しました。
+・on_actionから国名が自動的にState of Japanに変わらないようにしました。（もともとこの変更はSubMODを入れていることを開発中に認識するために導入していました。）
+・NF"Finish Nishiseto"は、高松のVPを追加することで兵站を改善します。
+・NF"Saitama Shin-Toshin"は、前橋のVPを追加することで兵站を改善します。
 ・NF"Anti-Sea Piracy Law"について、ジブチは日本に軍事通行権を得ることはありません。また、海軍経験値を得ることもありません。その代わりとして、イベントを通じて国民精神を得ることができます。
-・イベントを少し追加した
-・削除し忘れていた制作途上のイベントの一部を削除した。
-・一部のNFとイベントに文章を追加
-・一部の英文の見直し（あるいは悪化）
+・一部のNFおよびイベントにおいて外国に影響力を与える機能を一時的に削除しました。
+・不要なバックアップ用ファイルを一つ削除しました。
+・削除し忘れていた制作途上のイベントの一部を削除しました。
+・一部のideaを修正しました。
+・政府首班の輪郭を追加しました。 
+・イベントを少し追加しました。
+・いくつかの文章を追加しました。
+・一部の英文が修正（あるいは悪化）されました。
+
+既知の不具合
+・日本に限らず他の国での選挙のタイミングで独立保障が消失することがあります。これによりアメリカからの日本への独立保障が消える可能性が非常に高いです。念のため、このSubmodでは日本においてのみ、その開票イベントにおいて、set_politicsが開票当日の日付を反映させる際に他国からの独立保障が消滅しないようにしていますが、それでもアメリカの選挙のタイミングで消える場合があります。
+
+0.63
+Adjusted for the Millennium Dawn 1.6.3.
+Added \"Kato's Revolt\" Event which happened in 2000 and possibly lead to the alternative history.
+Added state's dynamic modifier about the Tokyo centralisation for most states.
+Changed the depopulation idea to the country's dynamic modifier.
+The outlook popularity will be changed as the party's popularity changes.
+Changed a few NFs of foreign policy about America.
+Senkaku State will no longer be capable to build anything until the nationalisation has been done.
+The then Prime Minister will no longer obtain the incapable trait while he kept playing golf at the Ehime-maru event.
+AI's Japan will no longer be able to change any tax rate.
+The name will no longer be changed from Japan to "State of Japan". This feature used to be introduced for the visual confirmation of the status of this submod.
+NF "Saitama Shin-Toshin" will add Victory Point at Takamatsu to improve logistics.
+NF "Finish Nishiseto" will add Victory Point at Takamatsu to improve logistics.
+Temporarily removed additions on foreign influences from some NFs and events
+Removed an useless backup file.
+Removed some events that were still under planning.
+Fixed some ideas' effects.
+Added picture profiles of leaders.
+Added some events.
+Added some text.
+Reviewed (or worsen) some English texts.
+
+Known Issue:
+Not only Japan but also other countries might be removed the guarantees they got, therefore it is possible highly that the guarantee from the United States to Japan will vanish. Just in case, for Japan only, this submod is trying not to vanish the guarantee at the timing that set_politics loads the date of election day, but eventually the guarantee would be removed when the United States held an election.
+
+-------------------------------------------------------------------------------
 
 0.62.1
 ・MD1.6.1に対応した。
@@ -38,6 +78,7 @@
 
 *Reuploaded for the fix of dependencies
 
+0.62.1
 Due to the change of several systems in MD, the building built at the beginning of scenarios will be changed. This resulted that some NFs which once had added factories will no longer add the factory but the vacant slot.
 Recreates the location of JASDF units.
 The 2021 Lower House General Elections will be launched on 14th October.
@@ -59,6 +100,8 @@ Added several events.
 Reviewed (or worsen) some English texts.
 
 *NOTE* Now you need to subscribe the new Millennium Dawn to use this submod. Please check the playlist in the Paradox Launcher.
+
+-------------------------------------------------------------------------------
 
 0.62
 ・China Encirclement NetworkシリーズのNFの終端を再編した。これにより、日本から中国または朝鮮半島国家に宣戦布告できるようにした
@@ -129,6 +172,8 @@ Changed some NF icons.
 Added texts to some NF and events.
 Reviewed (or worsen) some English texts.
 
+-------------------------------------------------------------------------------
+
 0.61.1
 ・WIPだったNFを一つ追加
 ・尖閣諸島を国有化した後のmodifierを追加
@@ -136,6 +181,8 @@ Reviewed (or worsen) some English texts.
 ・NF「太平洋ベルトのコンビナート」はもはやスロットを追加しない
 ・開始直後に尖閣諸島国有化のイベントが発生するのを止めるよう修正
 ・いくつかのイベントに画像を追加
+
+-------------------------------------------------------------------------------
 
 0.61
 ・MD1.5に対応
